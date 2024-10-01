@@ -1,0 +1,65 @@
+// --------------------------------------------------
+//		Pages: Error 404
+// --------------------------------------------------
+
+// @use 'helper' as *;
+@use 'tools' as *;
+
+.error404 {
+
+    background-color: color('primary');
+    background-image: url(../assets/backgrounds/bg-banner-members.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+
+    .site-header {
+        display: none;
+    }
+
+    .site-footer {
+        display: none;
+    }
+
+    #wrapper {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+     h4 {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1;
+        margin: $s_lg 0;
+        @include up(md) {
+            font-size: 40px;
+        }
+    }
+
+    img {
+        width: 60%;
+        max-width: 550px;
+    }
+
+    // .module {
+    //     min-height: 100vh;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+
+   
+
+    // p {
+    //     @extend .fs-5;
+    //     color: color('white');
+    //     margin: 30px 0;
+    //     text-align: center;
+    // }
+}

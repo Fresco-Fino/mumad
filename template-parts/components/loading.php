@@ -1,0 +1,2 @@
+<article class="loader">
+</article>

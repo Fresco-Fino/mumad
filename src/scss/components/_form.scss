@@ -1,0 +1,149 @@
+.slide.form {
+    
+    form {
+
+        input[type='text'],
+        input[type='email'],
+        input[type='tel'],
+        textarea {
+            @extend %fs6;
+            font-family: $font-base;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--color-white);
+
+            border: none;
+            border-bottom: 1px solid var(--color-white);
+            background: transparent;
+            outline: none;
+
+            margin-top: 10px;
+            padding-bottom: 15px;
+
+            width: 100%;
+
+            @include up(xxxl) {
+                margin-top: 20px;
+            }
+
+            &::placeholder {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.footer__form {
+    form {
+        input[type='text'],
+        input[type='email'],
+        input[type='tel'],
+        textarea {
+            @extend %fs6;
+            font-family: $font-base;
+            font-weight: 300;
+            font-style: italic;
+
+            border: none;
+            background: transparent;
+            outline: none;
+
+            color: var(--color-black);
+            border-bottom: 1px solid var(--color-black);
+            padding-left: 10px;
+
+            margin-top: 30px;
+            padding-bottom: 15px;
+
+            width: 100%;
+
+            &::placeholder {
+                opacity: 0.8;
+            }
+        }
+
+        .wpcf7-acceptance {
+
+            .wpcf7-list-item {
+                margin: 0;
+            }
+
+            .wpcf7-list-item-label {
+                line-height: 1.2em;
+            }
+
+            label {
+                display: flex;
+            }
+
+        }
+
+        // checkbox
+        .wpcf7-acceptance {
+            padding: $s_lg 0;
+            display: inline-block;
+            .wpcf7-list-item {
+                margin: 0;
+            }
+
+            input {
+                opacity: 0;
+            }
+
+            input:not(:checked) + .wpcf7-list-item-label::after {
+                opacity: 0;
+            }
+
+            .wpcf7-list-item-label {
+                position: relative;
+                padding-left: 10px;
+
+                @extend %fs7;
+                a {
+                    text-decoration: none;
+                    @extend %fs7;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(-16px, -50%);
+                    content: '';
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid var(--color-black);
+                    border-radius: 3px;
+                    transition: all 0.3s;
+                    background-color: transparent;
+                }
+                &::after {
+                    border: 0;
+                    width: 12px;
+                    height: 12px;
+                    left: 3px;
+                    opacity: 0;
+                    background-color: var(--color-black);
+                    border-radius: 3px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &.footer__form {
+        input[type='text'],
+        input[type='email'],
+        input[type='tel'],
+        textarea {
+            color: var(--color-black);
+            border-bottom: 1px solid var(--color-black);
+        }
+    }
+}

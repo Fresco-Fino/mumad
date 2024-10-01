@@ -1,0 +1,50 @@
+// --------------------------------------------------
+//		Tools: Fonts: Function and Headings
+// --------------------------------------------------
+
+@use 'settings' as *;
+@use 'breakpoints' as *;
+@use 'clamped' as *;
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:list';
+
+// Funcion para extraer familia, grosor y tamaño [ setfont("size", "h0") ]
+@function setfont($scheme, $tone: base) {
+    @return map.get($fonts, $scheme, $tone);
+}
+
+@each $heading, $size in $font-sizes {
+    %fs#{$heading} {
+        font-size: clamped(
+            map.get($size, 'mobile', 'min') * 1px,
+            map.get($size, 'mobile', 'max') * 1px,
+            390px,
+            991px
+        );
+
+        @include up(md) {
+            font-size: clamped(
+                map.get($size, 'desktop', 'min') * 1px,
+                map.get($size, 'desktop', 'max') * 1px,
+                992px,
+                1920px
+            );
+        }
+    }
+}
+
+// heading tags and class
+@each $size, $value in $font-sizes {
+    $class: '';
+
+    @if $size > 6 {
+        $class: '.fs#{$size}';
+    } @else {
+        $class: '.fs#{$size}';
+    }
+
+    #{$class} {
+        @extend %fs#{$size};
+    }
+}

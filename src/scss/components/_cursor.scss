@@ -1,0 +1,219 @@
+// --------------------------------------------------
+//		FXs: Cursor
+// --------------------------------------------------
+
+
+$c-light      : blue;
+$t-smooth_two : cubic-bezier(0.165, 0.84, 0.44, 1);
+$s-cursor     : 50px;
+
+@keyframes scale_cursor {
+	0% { transform: translate(-50%,-50%) scale(1); opacity: 1; }
+	100% { transform: translate(-50%,-50%) scale(2.5); opacity: 0; }
+}
+
+@keyframes rotate_drag {
+	0% { transform: rotate(0);  }
+	75% { transform: rotate(-25deg); }
+	100% { transform: rotate(0);  }
+}
+
+// cursor-on (body class)
+.cursor-on {
+
+	@media ( min-width: 992px  ) { cursor: none !important;  }
+
+	* {
+		@media ( min-width: 992px  ) { cursor: none !important;  }
+	}
+
+	// cursor general
+	.cursor {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+
+		z-index: 1000;
+
+		pointer-events: none;
+
+		// width: 100px;
+		// height: 100px;
+		// margin-left: -50px;
+		// margin-top: -50px;
+
+		// indicador
+		> span {
+
+			display: none;
+
+			position: relative;
+
+			width: $s-cursor;
+			height: $s-cursor;
+			border-radius: 100%;
+
+			background: rgba($color: white, $alpha:0.3);
+			transition: all .3s $t-smooth_two;
+			// transform: scale(.7);
+
+			box-shadow: 0 0 2rem rgba( 0, 0, 0, 0.3);
+
+			// border: 2px solid var(--color-primary);
+			// background-color: transparent;
+			transform: translate(-50%, -50%);
+
+			@media ( min-width: 992px  ) { display: block; }
+
+			&::before {
+				font-size: 18px;
+				transition: all .2s $t-smooth_two;
+				opacity: 0;
+			}
+
+			&::after {
+				transition: all .2s $t-smooth_two;
+				opacity: 0;
+			}
+
+			&.cursor--readmore,
+			&.cursor--viewall,
+			&.cursor--play,
+			&.cursor--pause,
+			&.cursor--drag {
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 8px;
+
+				width: 120px;
+				height: 120px;
+
+				&::before {
+					transition-delay: 0.4s;
+					opacity: 1;
+				}
+
+				&:after {
+					transition-delay: 0.4s;
+					opacity: 1;
+					content: '';
+					display: inline-block;
+					background-image: url(../assets/images/cursor-arrow.png);
+					background-size: cover;
+					width: 14px;
+					height: 14px;
+				}
+				
+			}
+
+			&.cursor--readmore {
+				&::before {
+					content: 'ver más';					
+				}
+			}
+
+			&.cursor--viewall {
+				&::before {
+					content: 'ver todos';
+				}
+			}
+
+
+			&.cursor--play {
+				&::before {
+					content: 'play';
+				}
+			}
+
+			&.cursor--pause {
+				&::before {
+					content: 'pause';
+				}
+				&::after {
+					display: none;
+				}
+			}
+
+			&.cursor--drag {
+				&::before {
+					content: 'drag';
+				}
+				&::after {
+					display: none;
+				}
+			}
+
+			// Cursor con flecha [Slider]
+			// &.drag{
+			//     width: 10rem;
+			//     height: 10rem;
+			//     background-color: transparent;
+			//     background-image: url(../images/drag.png);
+			//     background-size: cover;
+			//     border-radius: 0;
+			//     box-shadow: none;
+			//     animation: rotate_drag 2s infinite;
+			//     box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+			//     &::before {
+			//         opacity: 0;
+			//     }
+			//     &--prev {
+			//         transform: rotate(180deg);
+			//     }
+			// }
+
+			// Apagado
+			&.off { transform: scale(0); }
+
+			// Link
+			&.link {
+				transform: scale(1.5) translate(-50%, -50%);
+				box-shadow: 0 3px 3px rgba( var(--color-black), .3 );
+				mix-blend-mode: difference;
+				// background: rgba(244,201,58,0.9);
+
+				&::before {
+					animation: scale_cursor 1s infinite;
+				}
+
+				&.external::after {
+					content: "↗";
+					display: block;
+					white-space: pre;
+					color: $c-light;
+					font-weight: 100;
+					font-size: 1rem;
+					text-align: center;
+					width: 100%;
+					line-height: 1;
+					padding-top: 0.6em;
+				}
+			}
+		}
+	}
+}
+
+
+
+html[lang="en-US"] {
+
+	.cursor--readmore {
+		&::before {
+			content: 'view more' !important;					
+		}
+	}
+
+	.cursor--viewall {
+		&::before {
+			content: 'ver all' !important;
+		}
+	}
+
+}

@@ -1,0 +1,91 @@
+// --------------------------------------------------
+//		Settings: Fonts
+// --------------------------------------------------
+
+// Font base
+$font-base: 'HankenGrotesk', sans-serif;
+$font-heading: 'HankenGrotesk', sans-serif;
+$font-weight-base: 300;
+
+$font-sizes: (
+    0: (
+        desktop: (
+            max: 170,
+            min: 120
+        ),
+        mobile: (
+            max: 140,
+            min: 70
+        )
+    ),
+    1: (
+        desktop: (
+            max: 100,
+            min: 60
+        ),
+        mobile: (
+            max: 70,
+            min: 40
+        )
+    ),
+    2: (
+        desktop: (
+            max: 70,
+            min: 50
+        ),
+        mobile: (
+            max: 55,
+            min: 30
+        )
+    ),
+    3: (
+        desktop: (
+            max: 50,
+            min: 35
+        ),
+        mobile: (
+            max: 40,
+            min: 25
+        )
+    ),
+    4: (
+        desktop: (
+            max: 30,
+            min: 20
+        ),
+        mobile: (
+            max: 24,
+            min: 20
+        )
+    ),
+    5: (
+        desktop: (
+            max: 20,
+            min: 18
+        ),
+        mobile: (
+            max: 20,
+            min: 16
+        )
+    ),
+    6: (
+        desktop: (
+            max: 18,
+            min: 14
+        ),
+        mobile: (
+            max: 16,
+            min: 14
+        )
+    ),
+    7: (
+        desktop: (
+            max: 12,
+            min: 12
+        ),
+        mobile: (
+            max: 12,
+            min: 12
+        )
+    )
+);

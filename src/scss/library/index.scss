@@ -1,0 +1,10 @@
+// --------------------------------------------------
+//	Library
+// --------------------------------------------------
+
+// Librerias Externas (NODE)
+@use './node_modules/@splidejs/splide/dist/css/splide.min';
+@use './node_modules/lightgallery/scss/lightgallery-bundle';
+
+// Customize libraries
+@import 'lightgallery';

@@ -1,0 +1,24 @@
+// --------------------------------------------------
+//		Components: Sidenav: Sidenav
+// --------------------------------------------------
+
+.sidenav {
+    
+    // sidenav content ========================================
+    background-color: var(--color-grey-dark);
+    border-radius: 0;
+    padding: $d_sm $d_lg $d_sm $d_md;
+
+    height: 0;
+    width: 0;
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include up(md) {
+        border-radius: 24px;
+    }
+
+}

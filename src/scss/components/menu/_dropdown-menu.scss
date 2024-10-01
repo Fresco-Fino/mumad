@@ -1,0 +1,39 @@
+.main-dropdown {
+    position: relative;
+    padding-right: $d_md;
+
+    li,
+    a {
+        @extend %fs7;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: $font-heading;
+        font-weight: 400;
+        color: var(--color-white);
+    }
+
+    .dropdown__header {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-left: 5px;
+            height: 20px;
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+        }
+    }
+
+    .dropdown__body {
+        display: none;
+        flex-direction: column;
+        row-gap: 10px;
+
+        margin-top: 10px;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+    }
+}

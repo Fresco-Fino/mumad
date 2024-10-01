@@ -1,0 +1,24 @@
+// --------------------------------------------------
+//		Settings: Inputs
+// --------------------------------------------------
+
+$input-font-family: $font-base;
+$input-font-weight: 400;
+$input-line-height: 1.2;
+$input-margin-bottom: 2rem;
+
+$input-border-radius: 0;
+$input-border-width-custom: 0 0 1px 0;
+$input-border-color: $color-dark;
+
+$input-color: $color-dark;
+$input-color-label: $color-dark;
+$input-bg: transparent;
+
+$select-color: $color-dark;
+$select-bg: $color-white;
+
+// normal input
+$input-font-size-base: (1.4, 1.6, 1.8);
+$input-padding-y-base: (1, 1.5, 2);
+$input-padding-x-base: (0, 0, 0);

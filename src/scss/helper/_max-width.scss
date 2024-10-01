@@ -1,0 +1,47 @@
+// --------------------------------------------------
+//		Helpers: Max width
+// --------------------------------------------------
+
+.module {
+    &-default {
+        @extend %plr-small;
+    }
+
+    &-narrow {
+        @extend %plr-medium;
+    }
+
+    &-extra {
+        @extend %plr-large;
+    }
+
+    &-max-width {
+        @extend %plr-small;
+        @include up(xl) {
+            margin: 0 auto;
+            padding-right: 0;
+            padding-left: 0;
+            max-width: $max-width;
+        }
+    }
+
+    &-max-width-medium {
+        @extend %plr-small;
+        @include up(xl) {
+            margin: 0 auto;
+            padding-right: 0;
+            padding-left: 0;
+            max-width: $max-width-medium;
+        }
+    }
+
+    &-max-width-small {
+        @extend %plr-small;
+        @include up(xl) {
+            margin: 0 auto;
+            padding-right: 0;
+            padding-left: 0;
+            max-width: $max-width-small;
+        }
+    }
+}

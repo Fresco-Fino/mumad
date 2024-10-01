@@ -1,0 +1,133 @@
+// --------------------------------------------------
+//	Components: Single: Header
+// --------------------------------------------------
+
+.single__header {
+
+    position: relative;    
+    height: 100vh;
+    height: calc(var(--vh) * 100);
+    width: 100%;
+    background: url(../assets/images/video-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;    
+    @extend %plr-medium;
+    @extend %ptb-small;
+
+    video, img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        @include image-cover;
+        transition: all 0.2s;
+    }
+
+    video {
+        z-index: 10;
+    }
+
+    .single__header__poster {
+        z-index: 20;
+    }
+
+    &--image {
+        justify-content: flex-end;   
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+        }
+    }
+    
+    &__top {
+
+        position: relative;
+        z-index: 30;
+        max-width: 80%;
+
+        transition: all .3s;
+
+        @include down(xl) {
+            margin-top: 70px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            @extend %fs6;
+            color: var(--color-white);
+            text-decoration: none;
+
+            margin-bottom: $s-md;
+
+            svg {
+                font-size: 38px;
+                transform: rotate(180deg);
+            }           
+
+        }
+
+        h4 {
+            font-weight: normal;
+            font-size: 18px;
+            @include up(md) {
+                font-size: 20px;
+            }
+            @include up(xl) {
+                font-size: 25px;
+            }
+        }
+
+    }
+
+    &__content {
+        // @extend %plr-medium;
+        // @extend %pb-small;
+        position: relative;
+        z-index: 30;
+        transition: all .3s;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    h1 {
+        @extend %fs3;
+        font-weight: bold;
+        line-height: 1em;
+        color: var(--color-primary);
+        margin-bottom: $s_sm;
+    }
+
+    h3 {
+        @extend %fs4;
+        font-weight: 300;
+        line-height: 1em;
+        color: var(--color-white);
+    }
+
+    .single__header__meta {
+        @extend %fs4;
+        margin-top: $s_md;
+    }
+
+}
+
+body.video-play {
+    overflow: hidden;
+}

@@ -1,0 +1,47 @@
+// --------------------------------------------------
+//	Components: Cards: Case
+// --------------------------------------------------
+
+.card__award {
+
+    // card footer
+    .card__footer { 
+        width: calc(100% + (2 * $card_padding ));
+        padding: $card_padding 0;
+        margin: 0 ($card_padding * -1);
+        transition: all .3s;  
+        transform: translateY(110%);
+    }     
+
+    .card__badget {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        width: 29px;
+        height: 29px;
+        z-index: 20;
+        transform: translateY(-3px);        
+        background-position: center bottom;
+        background-size: 100% auto;
+        transition: all .3s;
+        &--gold {
+            background-image: url(../assets/images/award-gold.png);
+        }
+        &--silver {
+            background-image: url(../assets/images/award-silver.png);
+        }
+    }
+
+    &:hover {
+        .card__footer {  
+            width: 100%;
+            padding: $card_padding;
+            margin: 0;
+            transform: translateY(0);
+        }
+        .card__badget {            
+            height: 46px;
+        }
+    }
+
+}

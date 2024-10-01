@@ -1,0 +1,40 @@
+{
+  "name": "nanook",
+  "type": "module",
+  "version": "1.0.0",
+  "author": "F&F",
+  "scripts": {
+    "start": "gulp watch",
+    "sass": "gulp sass",
+    "min": "gulp minCss",
+    "script": "gulp script",
+    "bundle": "gulp bundle",
+    "images": "gulp imagemin"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-eslint": "latest",
+    "@rollup/plugin-node-resolve": "latest",
+    "browser-sync": "latest",
+    "dotenv": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "latest",
+    "gulp-watch": "latest",
+    "node-sass": "latest",
+    "rollup": "latest",
+    "rollup-plugin-terser": "latest",
+    "sass": "^1.63.3"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "gsap": "file:gsap-bonus.tgz",
+    "lenis": "^1.1.9"
+  }
+}

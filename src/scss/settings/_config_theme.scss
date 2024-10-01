@@ -1,0 +1,38 @@
+// --------------------------------------------------
+//		Settings: Config theme
+// --------------------------------------------------
+
+// Body  ========================================
+
+$body-bg: var(--color-black);
+$body-color: var(--color-white);
+
+// Clamp for Desktop & Mobile Spacing ========================================
+
+$d_xs: clamp(0.313rem, -0.045rem + 0.558vw, 0.625rem); //10px to 5px
+$d_sm: clamp(0.625rem, -0.089rem + 1.116vw, 1.25rem); //20px to 10px
+$d_md: clamp(0.938rem, -0.134rem + 1.674vw, 1.875rem); //30px to 15px
+$d_lg: clamp(1.25rem, -0.179rem + 2.232vw, 2.5rem); //40px to 20px
+$d_xl: clamp(2.5rem, -0.357rem + 4.464vw, 5rem); //80px to 40px
+$d_xxl: clamp(3.75rem, -0.536rem + 6.696vw, 7.5rem); //120px to 60px
+
+$m_xs: clamp(0.313rem, -0.01rem + 1.323vw, 0.625rem); //10px to 5px
+$m_sm: clamp(0.625rem, -0.02rem + 2.646vw, 1.25rem); //20px to 10px
+$m_md: clamp(0.938rem, -0.03rem + 3.968vw, 1.875rem); //30px to 15px
+$m_lg: clamp(1.25rem, -0.04rem + 5.291vw, 2.5rem); //40px to 20px
+$m_xl: clamp(2.5rem, -0.079rem + 10.582vw, 5rem); //80px to 40px
+$m_xxl: clamp(3.75rem, -0.119rem + 15.873vw, 7.5rem); //120px to 60px
+
+$s_xs: clamp(0.313rem, 0.233rem + 0.327vw, 0.625rem); //10px to 5px
+$s_sm: clamp(0.625rem, 0.466rem + 0.654vw, 1.25rem); //20px to 10px
+$s_md: clamp(0.938rem, 0.699rem + 0.98vw, 1.875rem); //30px to 15px
+$s_lg: clamp(1.25rem, 0.931rem + 1.307vw, 2.5rem); //40px to 20px
+$s_xl: clamp(2.5rem, 1.863rem + 2.614vw, 5rem); //80px to 40px
+$s_xxl: clamp(3.75rem, 2.794rem + 3.922vw, 7.5rem); //120px to 60px
+
+// Links  ========================================
+
+$link-color: var(--color-primary);
+$link-decoration: underline;
+$link-hover-color: var(--color-primary-light);
+$link-hover-decoration: null;

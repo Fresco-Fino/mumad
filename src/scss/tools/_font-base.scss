@@ -1,0 +1,38 @@
+// --------------------------------------------------
+//		Tools: font base [placeholder]
+// --------------------------------------------------
+
+@use 'settings' as *;
+@use 'breakpoints' as *;
+
+%font-base {
+    font-family: $font-base;
+
+    font-size: clamp(1.313rem, 1.15rem + 0.666vw, 1.563rem);
+    line-height: clamp(1.25rem, 1.081rem + 0.677vw, 1.5rem);
+
+    @include up(md) {
+        font-size: clamp(1.5rem, 1.233rem + 0.431vw, 1.75rem);
+        line-height: clamp(1.5rem, 0.698rem + 1.293vw, 2.25rem);
+    }
+}
+
+%font-small {
+    font-family: $font-base;
+
+    font-size: clamp(0.688rem, 0.566rem + 0.499vw, 0.875rem);
+
+    @include up(md) {
+        font-size: clamp(0.813rem, 0.612rem + 0.323vw, 1rem);
+    }
+}
+
+%font-menu {
+    font-family: $font-base;
+
+    font-size: clamp(0.75rem, 0.623rem + 0.508vw, 0.938rem);
+
+    @include up(md) {
+        font-size: clamp(0.875rem, 0.608rem + 0.431vw, 1.125rem);
+    }
+}

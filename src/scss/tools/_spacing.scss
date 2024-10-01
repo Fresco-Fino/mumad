@@ -1,0 +1,29 @@
+// --------------------------------------------------
+//		Tools: Distance
+// --------------------------------------------------
+
+@use 'settings' as *;
+@use 'breakpoints' as *;
+@use 'clamped' as *;
+@use 'sass:map';
+@use 'sass:list';
+
+@mixin space($property, $size) {
+    $value: map.get($clamp-x-spaces, $size);
+
+    #{$property}: clamped(
+        list.nth($value, 1) * 1px,
+        list.nth($value, 2) * 1px,
+        390px,
+        991px
+    );
+
+    @include up(md) {
+        #{$property}: clamped(
+            list.nth($value, 3) * 1px,
+            list.nth($value, 4) * 1px,
+            992px,
+            1920px
+        );
+    }
+}

@@ -1,0 +1,29 @@
+// --------------------------------------------------
+//	Components: Cards: Case
+// --------------------------------------------------
+
+.card__team {
+
+    img {
+        margin-bottom: $s_md;
+        max-width: 100%;
+        height: auto;
+    }
+
+    > div {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px
+    }
+
+    .team__name {
+        @extend %fs5;
+    }
+
+    .team__position {
+        @extend %fs6;
+        text-align: right;
+        color: var(--color-grey-light);
+    }
+
+}

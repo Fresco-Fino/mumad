@@ -1,0 +1,37 @@
+// --------------------------------------------------
+//		Tools: Lists
+// --------------------------------------------------
+
+@use 'colors' as *;
+@use 'settings' as *;
+
+%list-inline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+}
+
+%list-style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        padding-left: $d_sm;
+        margin-left: $d_md;
+        position: relative;
+        margin-bottom: $d_sm;
+        &:before {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            content: '';
+            display: block;
+            height: 4px;
+            width: 25px;
+            background-color: var(--color-black);
+        }
+    }
+}

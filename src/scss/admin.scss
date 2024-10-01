@@ -1,0 +1,97 @@
+// --------------------------------------------------
+//		Admin
+// --------------------------------------------------
+
+// Settings
+// variables y config
+@import 'settings';
+
+// Tools
+// Mixins, extend and functions
+@import 'tools';
+
+body.wp-admin :where(.editor-styles-wrapper) {
+    // paragraph
+    p {
+        line-height: 1.5em;
+        a {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    .has-x-large-font-size {
+        margin: 0;
+        font-family: $font-heading;
+        font-size: 60px !important;
+        @include up(md) {
+            font-size: 100px !important;
+        }
+        @include up(xl) {
+            font-size: 150px !important;
+        }
+    }
+
+    .has-large-font-size {
+        margin: 0;
+        font-family: $font-heading;
+        font-size: 40px !important;
+        @include up(md) {
+            font-size: 60px !important;
+        }
+        @include up(xl) {
+            font-size: 100px !important;
+        }
+    }
+
+    .has-medium-font-size {
+        margin: 0;
+        font-size: 24px !important;
+        @include up(md) {
+            font-size: 30px !important;
+        }
+        @include up(xl) {
+            font-size: 45px !important;
+        }
+    }
+
+    .has-small-font-size {
+        margin: 0;
+        font-size: 18px !important;
+        @include up(md) {
+            font-size: 20px !important;
+        }
+        @include up(xl) {
+            font-size: 24px !important;
+        }
+    }
+
+    // large & extralarge
+    .has-x-large-font-size,
+    .has-large-font-size {
+        line-height: 0.8;
+    }
+
+    .has-medium-font-size {
+        line-height: 1em;
+    }
+
+    // all sizes (strongs)
+    .has-x-large-font-size,
+    .has-large-font-size {
+        strong {
+            font-family: $font-heading;
+            font-weight: normal;
+        }
+    }
+}
+
+.plr-medium {
+    @extend %plr-small;
+}
+
+.ptb-small {
+    @extend %ptb-small;
+}

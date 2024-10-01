@@ -1,0 +1,46 @@
+// --------------------------------------------------
+//		Style
+// --------------------------------------------------
+
+// Loading (carga express)
+// @use 'components/loading';
+
+// Settings
+// variables y config
+@import 'settings';
+
+// Tools
+// Mixins, extend and functions
+@import 'tools';
+
+// Generic
+// Resets, normalize y genericos
+// @use 'generic';
+
+// Elements
+// Entidades HTML, sin clases
+@import 'elements';
+
+// Layout
+// Basic Layout: header, footer and wrapper
+@import 'layout';
+
+// Components
+// Piezas de UI
+@import 'components';
+
+// Library
+// Basic Layout: header, footer and wrapper
+@import 'library';
+
+// Helper
+// Clases de ayuda, textos, colores y demás
+@import 'helper';
+
+// Modules
+// Modules UI
+@import 'modules';
+
+// Helper
+// Clases de ayuda, textos, colores y demás
+@import 'pages';

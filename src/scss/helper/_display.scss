@@ -1,0 +1,21 @@
+// --------------------------------------------------
+//	Helpers: Display
+// --------------------------------------------------
+
+.hide-mobile {
+    @include down(md) {
+        display: none !important;
+    }
+}
+
+.hide-ipad {
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        display: none !important;
+    }
+}
+
+.hide-desktop {
+    @include up(md) {
+        display: none !important;
+    }
+}

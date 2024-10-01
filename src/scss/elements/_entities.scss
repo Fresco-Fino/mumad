@@ -1,0 +1,93 @@
+// --------------------------------------------------
+//	Elements: Entities
+// --------------------------------------------------
+
+* {
+    box-sizing: border-box;
+}
+
+// html
+
+// body
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+
+    @extend %fs5;
+
+    background-color: $body-bg;
+    font-family: $font-base;
+    font-weight: $font-weight-base;
+    color: $body-color;
+}
+
+// paragrapgh
+p,
+li,
+a {
+    @extend %fs5;
+    margin: 0;
+    padding: 0;
+    font-family: $font-base;
+
+    strong {
+        font-weight: 700;
+    }
+}
+
+button {
+    @extend %fs6;
+}
+
+small {
+    @extend %fs7;
+}
+
+// links
+a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $link-hover-color;
+    }
+}
+
+// headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol,
+li {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+// blockquote
+blockquote {
+    margin: 0 0 30px 0;
+    padding: 0;
+    p {
+        // @extend .fs-3;
+        font-weight: bold;
+    }
+}
+
+// images
+img,
+video {
+    display: block;
+}

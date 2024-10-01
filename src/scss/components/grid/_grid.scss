@@ -1,0 +1,98 @@
+// --------------------------------------------------
+//	Component: Grid
+// --------------------------------------------------
+
+$card_padding: 15px;
+
+.grid {
+
+    @extend %plr-medium;
+    @extend %pb-medium;
+    
+    display: flex;
+
+    @include up(md) {
+        gap: 25px;
+    }
+
+    // grid columns
+    .grid__column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @include up(md) {
+            width: 33.33%;
+        }
+    }
+
+    // grid intro
+    .grid__intro {
+
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .grid__intro__title {            
+            margin-bottom: $s_lg;
+            p {
+                @extend %fs4;
+                font-weight: bold;
+            }
+        }
+
+        .grid__intro__text {            
+            p {
+                @extend %fs5;
+            }            
+        }
+
+        a {
+            margin-top: 25px;
+        }
+
+    }
+}
+
+// grid desktop
+
+.grid__desktop {
+    @include down(xl) {
+        display: none;
+    }
+
+    // grid intro
+    .grid__intro {
+        aspect-ratio: 1/1;
+    }
+}
+
+// grid mobile
+
+.grid__mobile {
+    display: flex;
+    flex-direction: column;
+
+    @include up(md) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    @include up(md) {
+        gap: 30px;
+    }
+
+    @include up(xl) {
+        display: none;
+    }
+
+    .grid__item {
+        @include up(md) {
+            width: calc(50% - 10px);
+        }
+        @include up(md) {
+            width: calc(33.33% - 20px);
+        }
+    }
+}

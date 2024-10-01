@@ -1,0 +1,19 @@
+// --------------------------------------------------
+//	Helpers: Border
+// --------------------------------------------------
+
+@use 'sass:map';
+@use 'sass:list';
+
+.module-border-top {
+    @include border(top);
+}
+
+.module-border-bottom {
+    @include border(bottom);
+}
+
+// .module-border-complete {
+//     @include border(top);
+//     @include border(bottom);
+// }

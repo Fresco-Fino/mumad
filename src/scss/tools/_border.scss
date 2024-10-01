@@ -1,0 +1,12 @@
+// --------------------------------------------------
+//	Tools: Border
+// --------------------------------------------------
+
+@use 'colors' as *;
+
+@mixin border($position) {
+    border-color: color('black');
+    border-style: solid;
+    border-width: 0;
+    border-#{$position}-width: 5px;
+}

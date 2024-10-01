@@ -1,0 +1,43 @@
+// --------------------------------------------------
+//	Components: Menu: Main Menu
+// --------------------------------------------------
+
+.main-navigation {
+
+    opacity: 0;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;        
+
+        @include up(md) {
+            text-align: left;
+        }
+    }
+
+    a {
+        
+        @extend %fs2;
+        font-weight: 700;
+        color: var(--color-white);
+        text-decoration: none;
+        line-height: 1em;
+        word-break: keep-all;
+        white-space: nowrap;
+
+        @include down(md) {
+            font-size: 42px !important;
+        }
+
+        &.current {
+            color: var(--color-primary);
+        }
+
+        &:hover {
+            color: var(--color-primary);
+        }
+
+    }
+
+}

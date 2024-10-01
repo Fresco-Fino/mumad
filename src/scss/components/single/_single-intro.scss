@@ -1,0 +1,87 @@
+// --------------------------------------------------
+//	Components: Single: Intro
+// --------------------------------------------------
+
+.single__intro {
+
+    @extend %plr-medium;
+    @extend %ptb-medium;
+
+    // first row
+    .columns:first-child {
+        margin-bottom: $s_xl;
+    }
+
+    // titles column
+    &__title {
+        @include down(md) {
+            display: none;
+        }
+    }
+
+    // title
+    h2 {
+        @extend %fs3;
+        font-weight: bold;
+        line-height: 1em;
+        color: var(--color-white);
+        margin-bottom: $s_xs;
+    }
+
+    // subtitle
+    h3 {
+        @extend %fs4;
+        font-weight: 300;
+        line-height: 1em;
+        color: var(--color-grey-light);
+    }
+
+    // logo
+    &__brand {
+
+        display: flex;
+        @include up(md) {
+            justify-content: flex-end;
+        }
+        
+        img {
+            max-height: 20px;
+            width: auto;
+            @include up(md) {
+                max-height: 35px;
+            }
+        }
+    }
+
+    // features
+    &__features {
+        
+    }
+
+    &__feature {
+
+        display: flex;
+        gap: $s_sm;
+        padding-bottom: $s_md;
+        margin-bottom: $s_md;
+
+        border-bottom: 1px solid var(--color-white);
+
+        span {
+            @extend %fs6;
+            font-weight: 300;
+            line-height: 1em;
+            color: var(--color-primary);
+        }
+
+        p {
+            @extend %fs4;
+            font-weight: bold;
+            line-height: 1em;
+            color: var(--color-white);
+            padding-top: $s_sm;
+        }
+
+    }    
+
+}

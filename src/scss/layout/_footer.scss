@@ -1,0 +1,231 @@
+// --------------------------------------------------
+//	Layout: Footer
+// --------------------------------------------------
+
+.site-footer {    
+
+    &:not(.footer__contact) {
+        background-color: var(--color-primary);
+        @extend %pt-medium;
+        position: relative;
+        z-index: 0;
+        margin: -100vh 0 0 0;
+    }
+
+    // color y font
+    p, a, li, h4 {
+        color: var(--color-black);
+        line-height: 1.4em;
+    }
+
+    // links
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // footer top
+    .footer__top {
+        
+        @extend %plr-medium;
+
+        display: flex;
+        column-gap: $d_xl;
+        flex-direction: column;
+
+        @include up(md) {
+            flex-direction: row;
+        }
+
+        // footer contact
+        .footer__contact {
+
+            width: 100%;
+            @include up(md) {
+                width: 45%;
+            }
+
+            &__title {
+                @extend %fs3;
+                font-weight: 700;
+                padding-bottom: 5px;
+                border-bottom: 1px solid var(--color-black);
+            }
+
+            address {
+
+                @include down(md) {
+                    display: none;
+                }
+
+                * {
+                    @extend %fs6;
+                    font-weight: 300;
+                    font-style: normal;
+                    text-decoration: none;
+                }
+
+                h4 {
+                    font-weight: 700;
+                }
+
+                li {
+                    padding-top: $d_xs;
+                }
+
+                div {
+                    padding-top: $d_lg;
+                }
+
+            }
+
+        }
+
+        // Form
+        .footer__form {
+
+            width: 100%;
+            @include up(md) {
+                width: 55%;
+            }
+            @include down(md) {
+                padding-top: $m_md;
+            }
+            
+
+            p {
+                padding-bottom: $s_xs;
+            }
+
+            .form__title {
+                @extend %fs4;
+                font-weight: 700;
+            }
+
+            .form__body {
+                @extend %fs6;
+                font-weight: 300;
+            }
+
+            .wpcf7 {
+                .checkbox {
+                    text-align: center;
+                    @include up(md) {
+                        text-align: left;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    column-gap: $s_sm;
+
+                    margin: 0 auto;
+                    margin-top: $m_xl;
+
+                    @include down(md) {
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                    }
+
+                    @include up(md) {
+                        margin: 0;
+                        margin-top: $d_md;
+                    }
+
+                    span {
+                        color: var(--color-white);
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .footer__brand {
+
+        @extend %plr-medium;
+        margin: $s_xl 0;
+
+        @include down(md) {
+            padding: 0 10px !important;
+        }
+
+        a {
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+
+    .footer__legal {
+        @extend %plr-medium;
+        background-color: var(--color-black);
+
+        ul {
+            padding: $m_xxl 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            row-gap: $m_md;
+
+            @include up(md) {
+                flex-direction: row;
+                text-align: left;
+
+                padding: $d_lg 0;
+            }
+
+            li a {
+                color: var(--color-white);
+                @extend %fs6;
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--color-grey);
+                }
+            }
+        }
+    }
+
+    .contact__wrapper-mobile {
+        
+        @extend %plr-medium;
+        @extend %pb-small;
+
+        @include up(md) {
+            display: none;
+        }
+
+        * {
+            @extend %fs6;
+            font-weight: 300;
+            font-style: normal;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        h4 {
+            font-weight: 700;
+            padding-bottom: $m_sm;
+        }
+
+        div {
+            &:not(:first-of-type) {
+                padding-top: $m_lg;
+            }
+            li {
+                padding-top: $d_xs;
+            }
+        }
+    }
+}

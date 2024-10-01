@@ -1,0 +1,1 @@
+<a href="<?php bloginfo('url') ?>" class="site-header__brand">Brand</a>

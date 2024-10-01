@@ -1,0 +1,21 @@
+// --------------------------------------------------
+//	Components: Cards: Case
+// --------------------------------------------------
+
+.card__blog {
+
+    margin-bottom: $s_lg;
+    text-decoration: none;
+    color: var(--color-white);
+
+    img {
+        max-width: 100%;
+    }
+
+    h2 {
+        padding: $s_md 0;
+        @extend %fs5;
+        line-height: 1.2em;
+    }
+
+}

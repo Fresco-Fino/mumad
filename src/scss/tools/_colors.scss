@@ -1,0 +1,66 @@
+// --------------------------------------------------
+//		Tools: Colors: Root and Color function
+// --------------------------------------------------
+
+@use 'settings' as *;
+@use 'sass:map';
+
+// color function [ color('primary', 'light'); ]
+@function color($scheme, $tone: base) {
+    @return map.get($colors, $scheme, $tone);
+}
+
+
+// root colors
+:root {
+    @each $colorname, $palette in $colors {
+
+        @each $key, $value in $palette {
+
+            @if $key == base {
+                $keyname: "--color-" + $colorname;
+                #{$keyname}: #{$value};
+            } @else {
+                $keyname: "--color-" + $colorname + "-" + $key;
+                #{$keyname}: #{$value};
+            }
+        }
+
+    }
+
+}
+
+// background and text
+
+@each $colorname, $palette in $colors {
+
+    @each $key, $value in $palette {
+
+        $class_bg : '';
+        $class_txt : '';
+
+        // background
+        @if $key == base {
+            $class_bg : '.bg-#{$colorname}';
+        } @else {
+            $class_bg : '.bg-#{$colorname}-#{$key}';
+        }
+
+        #{$class_bg} {
+            background-color: #{$value};
+        }
+
+        // text
+        @if $key == base {
+            $class_txt : '.text-#{$colorname}';
+        } @else {
+            $class_txt : '.text-#{$colorname}-#{$key}';
+        }
+
+        #{$class_txt} {
+            color: #{$value};
+        }
+
+    }
+
+}

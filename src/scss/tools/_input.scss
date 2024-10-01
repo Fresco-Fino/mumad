@@ -1,0 +1,73 @@
+// --------------------------------------------------
+//		Headings: input [placeholder]
+// --------------------------------------------------
+
+@use 'sass:map';
+@use 'sass:list';
+
+// Input ========================================
+
+%input {
+	font-family: 	$input-font-family;
+	font-weight: 	$input-font-weight;
+	line-height: 	$input-line-height;
+	border-radius: 	$input-border-radius;
+}
+
+
+// Normal ========================================
+
+%input-normal {
+	@extend %input;
+	padding: list.nth($input-padding-y-base, 1)*1rem list.nth($input-padding-x-base, 1)*1rem;
+	font-size: list.nth($input-font-size-base, 1)*1rem;
+
+	@include media-breakpoint-up(md) {
+		padding: list.nth($input-padding-y-base, 2)*1rem list.nth($input-padding-x-base, 2)*1rem;
+		font-size: list.nth($input-font-size-base, 2)*1rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: list.nth($input-padding-y-base, 3)*1rem list.nth($input-padding-x-base, 3)*1rem;
+		font-size: list.nth($input-font-size-base, 3)*1rem;
+	}
+}
+
+
+// Small ========================================
+
+%input-sm {
+	@extend %input;
+	padding: list.nth($input-padding-y-base-sm, 1)*1rem list.nth($input-padding-x-base-sm, 1)*1rem;
+	font-size: list.nth($input-font-size-base-sm, 1)*1rem;
+
+	@include media-breakpoint-up(md) {
+		padding: list.nth($input-padding-y-base-sm, 2)*1rem list.nth($input-padding-x-base-sm, 2)*1rem;
+		font-size: list.nth($input-font-size-base-sm, 2)*1rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: list.nth($input-padding-y-base-sm, 3)*1rem list.nth($input-padding-x-base-sm, 3)*1rem;
+		font-size: list.nth($input-font-size-base-sm, 3)*1rem;
+	}
+}
+
+
+// Large ========================================
+
+%input-lg {
+	@extend %input;
+
+	padding: list.nth($input-padding-y-base-lg, 1)*1rem list.nth($input-padding-x-base-lg, 1)*1rem;
+	font-size: list.nth($input-font-size-base-lg, 1)*1rem;
+
+	@include media-breakpoint-up(md) {
+		padding: list.nth($input-padding-y-base-lg, 2)*1rem list.nth($input-padding-x-base-lg, 2)*1rem;
+		font-size: list.nth($input-font-size-base-lg, 2)*1rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: list.nth($input-padding-y-base-lg, 3)*1rem list.nth($input-padding-x-base-lg, 3)*1rem;
+		font-size: list.nth($input-font-size-base-lg, 3)*1rem;
+	}
+}

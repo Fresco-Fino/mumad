@@ -1,0 +1,25 @@
+// --------------------------------------------------
+//	Components: Custom Buttons
+// --------------------------------------------------
+
+@use 'sass:color';
+
+.btn {
+    width: fit-content;
+    @extend %buttons;
+}
+
+.btn__icon {
+    
+    display: flex;
+    align-items: center;
+    svg {
+        margin-left: $s_md;
+        font-size: 25px;
+    }
+
+    img {
+        margin-left: $s_xs;
+    }
+
+}

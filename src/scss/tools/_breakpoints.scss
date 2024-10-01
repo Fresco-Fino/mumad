@@ -1,0 +1,30 @@
+// --------------------------------------------------
+//		Tools: Breakpoints Mixins [up and down]
+// --------------------------------------------------
+
+@use 'settings' as *;
+@use 'sass:map';
+
+// up media querie
+@mixin up($size) {
+    // @debug $size;
+    @if map-has-key($breakpoints, $size) {
+        // @debug #{map-get($breakpoints, $size)};
+        @media screen and (min-width: #{map-get($breakpoints, $size) * (1px)}) {
+            @content;
+        }
+    }
+}
+
+// down media querie
+@mixin down($size) {
+    // @debug $size;
+    @if map-has-key($breakpoints, $size) {
+        // @debug #{map-get($breakpoints, $size)};
+        $size_down : (map-get($breakpoints, $size) - 1) * 1px;
+        // @debug $size_down;
+        @media screen and (max-width: $size_down ) {
+            @content;
+        }
+    }
+}

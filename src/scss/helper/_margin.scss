@@ -1,0 +1,63 @@
+// --------------------------------------------------
+//	Helpers: Margins
+// --------------------------------------------------
+
+// Block margins vertical ========================================
+
+@each $size, $value in $clamp-y-spaces {
+    @if $size != 'none' {
+        .mt-#{$size} {
+            @extend %mt-#{$size};
+        }
+
+        .mb-#{$size} {
+            @extend %mb-#{$size};
+        }
+
+        .mtb-#{$size} {
+            @extend %mtb-#{$size};
+        }
+
+        .pt-#{$size} {
+            @extend %pt-#{$size};
+        }
+
+        .pb-#{$size} {
+            @extend %pb-#{$size};
+        }
+
+        .ptb-#{$size} {
+            @extend %ptb-#{$size};
+        }
+    }
+}
+
+// Block margins horizontal ========================================
+
+@each $size, $value in $clamp-x-spaces {
+    @if $size != 'none' {
+        .ml-#{$size} {
+            @extend %ml-#{$size};
+        }
+
+        .mr-#{$size} {
+            @extend %mr-#{$size};
+        }
+
+        .mlr-#{$size} {
+            @extend %mlr-#{$size};
+        }
+
+        .pl-#{$size} {
+            @extend %pl-#{$size};
+        }
+
+        .pr-#{$size} {
+            @extend %pr-#{$size};
+        }
+
+        .plr-#{$size} {
+            @extend %plr-#{$size};
+        }
+    }
+}

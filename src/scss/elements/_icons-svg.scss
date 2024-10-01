@@ -1,0 +1,26 @@
+// --------------------------------------------------
+//		Elements: Icons SVG
+// --------------------------------------------------
+
+// Placeholder ========================================
+
+%svg-icon {
+	align-items: center;
+	width: 1em;
+	height: 1em;
+	background-color: transparent;
+	fill: currentColor;
+}
+
+
+// Classes ========================================
+
+.svg-icon {
+	display: flex;
+	@extend %svg-icon;
+}
+
+.svg-icon-inline {
+	display: inline-flex;
+	@extend %svg-icon;
+}

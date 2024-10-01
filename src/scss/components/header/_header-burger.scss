@@ -1,0 +1,84 @@
+// --------------------------------------------------
+//	Layout: Header: Center
+// --------------------------------------------------
+
+.header__menu {
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s;
+
+    .burger {
+        
+        position: relative;
+        z-index: 10;
+
+        width: 62px;
+        aspect-ratio: 1 / 1;
+        background-color: var(--color-primary);
+        border-radius: 100%;
+
+        @include up(md) {
+            width: 40px;
+        }
+
+        span {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+
+            width: 23px;
+            height: 1.5px;
+
+            display: block;
+            background-color: var(--color-black);
+
+            @include up(md) {
+                width: 14px;
+            }
+
+            &:first-of-type {
+                transform-origin: 50% 0;
+                top: calc(50% - 5px);
+                transition: all 0.3s ease;
+
+                @include up(md) {
+                    top: calc(50% - 3px);
+                }
+            }
+
+            &:last-of-type {
+                top: calc(50% + 5px);
+                transition: all 0.3s ease;
+
+                @include up(md) {
+                    top: calc(50% + 3px);
+                }
+            }
+        }
+    }
+
+    &.is-open .burger span {
+        &:first-child {
+            transition: all 0.3s ease;
+            transform: translate(-10px, 5px) rotate(45deg);
+
+            @include up(md) {
+                transform: translate(-5px, 2px) rotate(45deg);
+            }
+        }
+
+        &:last-child {
+            transform: translate(-10px, -5px) rotate(-45deg);
+            transition: all 0.3s ease;
+
+            @include up(md) {
+                transform: translate(-5px, -4px) rotate(-45deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+// --------------------------------------------------
+//	Layout: Header: Brand
+// --------------------------------------------------
+
+.header__brand {
+
+    position: relative;
+    display: block;
+
+    @include up(md) {
+        width: 38px;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        transition: all 0.3s;
+    }
+    
+}

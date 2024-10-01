@@ -1,0 +1,82 @@
+// --------------------------------------------------
+//		Tools: Buttons
+// --------------------------------------------------
+
+@use 'settings' as *;
+@use 'breakpoints' as *;
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:math';
+
+%buttons {
+    font-family: $btn-font-family;
+    font-weight: $btn-font-weight;
+    line-height: $btn-line-height;
+
+    text-decoration: none;
+    border-radius: $btn-border-radius;
+    transition: all 0.3s;
+
+    border-style: solid;
+    border-width: $btn-border-width;
+
+    padding: $btn-padding-y $btn-padding-x;
+}
+
+// class buttons
+@each $colorname, $palette in $colors {
+    @each $key, $value in $palette {
+        @if $key == base {
+            // $keyname: "--color-" + $colorname;
+            // #{$keyname}: #{$value};
+
+            .btn__#{$colorname} {
+                background-color: $value;
+                border-color: transparent;
+            }
+
+            .btn__outline-#{$colorname} {
+                background-color: transparent;
+                border-color: $value;
+                border-style: solid;
+                border-width: $btn-outline-border-width;
+                color: $value;
+            }
+
+        } @else {
+            // $keyname: "--color-" + $colorname + "-" + $key;
+            // #{$keyname}: #{$value};
+
+            .btn__#{$colorname}-#{$key} {
+                background-color: $value;
+                border-color: transparent;
+            }
+
+            .btn__outline-#{$colorname}-#{$key} {
+                background-color: transparent;
+                border-color: $value;
+                border-style: solid;
+                border-width: $btn-outline-border-width;
+                color: $value;
+            }
+        }
+    }
+}
+
+// extend color buttons
+
+@each $colorname, $values in $buttons-colors {
+    
+    .btn__#{$colorname} {
+
+        color: map-get($values, 'color');
+
+        &:hover {
+            color: map-get($values, 'hover-color');
+            background-color: map-get($values, 'hover-bg');
+            border-color: map-get($values, 'hover-border-color');
+        }
+
+    }
+
+}

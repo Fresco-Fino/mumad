@@ -1,0 +1,22 @@
+// --------------------------------------------------
+//		Tools: Dark layer
+// --------------------------------------------------
+
+@use 'settings' as *;
+
+@mixin dark-layer {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    content: '';
+
+    background: rgba($color: #000000, $alpha: 0.25);
+
+}

@@ -1,0 +1,13 @@
+// --------------------------------------------------
+//	Components: Single: Carousel
+// --------------------------------------------------
+
+.single__carousel {
+    @extend %ptb-large;
+    img {
+        // max-height: 450px;
+        // @include down(md) {
+        //     max-height: 40vh;
+        // }
+    }
+}

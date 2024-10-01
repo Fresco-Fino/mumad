@@ -1,0 +1,25 @@
+// --------------------------------------------------
+//		Modules: Common: Background
+// --------------------------------------------------
+
+.module__intro {
+
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @include up(md) {
+        width: 80%;
+    }
+
+    p {
+        @extend %fs3;
+        line-height: 1.2em;
+        text-align: center;
+    }
+
+    strong {
+        color: var(--color-secondary);
+    }
+
+}

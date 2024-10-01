@@ -1,0 +1,17 @@
+// --------------------------------------------------
+//		Settings
+// --------------------------------------------------
+
+@forward 'breakpoints'; // your breakpoints
+
+@forward 'colors'; // INIT: configure your colors
+@forward 'fontface'; // INIT: include your font
+@forward 'fonts'; // INIT: configure your fonts
+@forward 'buttons'; // INIT: configure your buttons
+
+@forward 'config_theme'; // INIT: revise your config
+
+// pending
+
+// @forward 'inputs';          // INIT: configure your inputs
+@forward 'margins'; // INIT: configure your margins

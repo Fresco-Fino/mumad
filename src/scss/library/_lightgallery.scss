@@ -1,0 +1,134 @@
+// --------------------------------------------------
+//		Libraries: Swiper
+// --------------------------------------------------
+
+
+// fondo
+.lg-backdrop {
+    z-index: 99999;
+    background: rgba($color: #000000, $alpha: .85);
+}
+
+// Wrap
+.lg-outer {
+    z-index: 99999;
+}
+
+// Contenedor
+.lg-outer .lg-content  {
+    // position: relative;
+    height: 100%;
+}
+
+// Close
+.lg-toolbar  .lg-close  {
+    position: fixed;
+    left: initial !important;
+    right: 35px;
+    top: 15px;
+    z-index: 3500;
+    transform: translateX(50%) !important;
+}
+
+
+
+//////////////////////////////////////////
+// Reset Default URL from Lightfallery
+.lg-outer .lg-item:not(.lg-start-end-progress) {
+    background: url("../assets/images/loading.gif") no-repeat scroll center center transparent;
+}
+
+@font-face {
+    font-family: "lg";
+    src: url("../assets/fonts/lg.woff2?") format("woff2"),
+        url("../assets/fonts/lg.ttf?") format("truetype"),
+        url("../assets/fonts/lg.woff?") format("woff"),
+        url("../assets/fonts/lg.svg?") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+
+// CLOSE
+// .lg-toolbar  .lg-close  {
+
+//     &:after {
+//         content: '' !important;
+//     }
+
+//     position: fixed;
+//     left: initial !important;
+//     right: 50%;
+//     top: 2rem !important;
+//     z-index: 3500;
+//     transform: translateX(50%) !important;
+
+//     background: transparent;
+
+//     opacity: 1 !important;
+//     text-align: center;
+
+//     width: 2.4rem !important;
+//     height: 2.4rem !important;
+
+//     background-image: url(../assets/images/lg-close.png) !important;
+//     background-size: cover !important;
+//     padding: 0 !important;
+
+//     transition: .2s ease-in-out;
+
+//     // @media ( min-width: 768px  ) {
+//     //     width: 3.2rem !important;
+//     //     height: 3.2rem !important;
+//     // }
+
+// }
+
+// arrows
+// .lg-icon {
+
+//     position: absolute;
+
+//     overflow: hidden;
+//     text-indent: -999px;
+
+//     width: 5rem;
+//     height: 1.3rem;
+//     padding: 0 !important;
+//     opacity: 1 !important;
+
+//     background: transparent !important;
+
+//     @include media-breakpoint-down(md) {
+//         top: initial;
+//         bottom: 3rem;
+//     }
+
+//     @include media-breakpoint-up(md) {
+//         top: 50%;
+//         transform: translateY(-50%);
+//     }
+
+//     &.lg-prev  {
+//         left                  : 3rem;
+//         background-image      : url(../assets/images/lg-arrow-left.png) !important;
+//         background-size       : cover !important;
+//         @include media-breakpoint-down(md) {
+//             left: 50%;
+//             transform: translateX(-120%);
+//         }
+//     }
+
+//     &.lg-next {
+//         right                 : 3rem;
+//         background-image      : url(../assets/images/lg-arrow-right.png) !important;
+//         background-size       : cover !important;
+//         @include media-breakpoint-down(md) {
+//             right: 50%;
+//             transform: translateX(120%);
+//         }
+//     }
+
+// }

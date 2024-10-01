@@ -1,0 +1,46 @@
+// --------------------------------------------------
+//	Components: Single: Masonry
+// --------------------------------------------------
+
+.single__masonry {
+
+    @extend %plr-medium;
+    @extend %ptb-medium;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+
+    flex-direction: column;
+
+    @include up(md) {
+        flex-direction: row;
+    }
+
+    img {
+
+        max-width: 100%;
+        height: auto;
+
+        @include up(md) {
+            max-width: calc((50% - 10px));
+        }
+
+        &:nth-child(1n) {            
+            @include up(md) {
+                // padding-top: 30vh;
+                transform: translateY(25vh);
+            }
+        }
+
+        &:nth-child(2n) {            
+            @include up(md) {
+                // padding-top: 100vh;
+                transform: translateY(50vh);
+            }
+        }
+
+    }
+
+}

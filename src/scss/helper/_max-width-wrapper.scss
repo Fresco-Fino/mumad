@@ -1,0 +1,47 @@
+// --------------------------------------------------
+//		Helpers: Max width
+// --------------------------------------------------
+
+.module {
+    &-default {
+        .module__wrapper {
+            @extend %plr-small;
+        }
+    }
+
+    &-narrow {
+        .module__wrapper {
+            @extend %plr-medium;
+        }
+    }
+
+    &-extra {
+        .module__wrapper {
+            @extend %plr-large;
+        }
+    }
+
+    &-max-width {
+        .module__wrapper {
+            @extend %plr-small;
+            @include up(xl) {
+                margin: 0 auto;
+                padding-right: 0;
+                padding-left: 0;
+                max-width: $max-width;
+            }
+        }
+    }
+
+    &-max-width-small {
+        .module__wrapper {
+            @extend %plr-small;
+            @include up(xl) {
+                margin: 0 auto;
+                padding-right: 0;
+                padding-left: 0;
+                max-width: $max-width-small;
+            }
+        }
+    }
+}

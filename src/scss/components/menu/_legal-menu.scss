@@ -1,0 +1,22 @@
+// --------------------------------------------------
+//	Components: Menu: Main Menu
+// --------------------------------------------------
+
+.legal-navitation {
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @include up(md) {
+            gap: 50px;
+        }
+    }
+    
+    a {
+        font-size: 13px;
+        line-height: 20px;
+        text-decoration: none;
+        display: flex;
+    }
+}

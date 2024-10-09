@@ -1,1 +1,3 @@
-<a href="<?php bloginfo('url') ?>" class="site-header__brand">Brand</a>
+<a href="<?php bloginfo('url') ?>" class="site-header__brand">
+    <img src="<?php bloginfo('template_url') ?>/dist/assets/logos/brand.png" alt="">
+</a>

@@ -1,0 +1,19 @@
+// --------------------------------------------------
+//		Modules: Common: Background
+// --------------------------------------------------
+
+.module__section + .module__title,
+.module__title + .module__text ,
+.module__title + .module__subtitle,
+.module__subtitle + .module__text  {
+    margin-top: $s_md;
+}
+
+.module__header + .items {
+    margin-top: $s_lg;
+}
+
+.module {
+    background-size: cover;
+    background-position: center;
+}

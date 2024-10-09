@@ -2,40 +2,62 @@
 //	Components: Menu: Main Menu
 // --------------------------------------------------
 
-.main-navigation {
-
-    opacity: 0;
+.main-navigation {    
 
     ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;        
 
-        @include up(md) {
-            text-align: left;
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;       
+        
+        @include up(lg) {
+            text-align: center;  
+            flex-direction: row;
+            gap: 20px;
         }
+        
     }
 
     a {
+
+        position: relative;
         
-        @extend %fs2;
-        font-weight: 700;
-        color: var(--color-white);
+        font-size: 16px;
+        color: var(--color-primary);
         text-decoration: none;
         line-height: 1em;
         word-break: keep-all;
         white-space: nowrap;
+        text-transform: uppercase;
 
-        @include down(md) {
-            font-size: 42px !important;
-        }
+        @include down(lg) {
+            font-family: $font-heading;
+            font-size: 30px;
+            font-weight: bold;
+        }        
 
-        &.current {
-            color: var(--color-primary);
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-primary);
+            transition: all 0.3s;
+            transform: translateY(100%);
+            @include down(lg) {
+                display: none;
+            }
         }
 
         &:hover {
             color: var(--color-primary);
+            &:before {
+                width: 100%;
+                left: 0;
+            }
         }
 
     }

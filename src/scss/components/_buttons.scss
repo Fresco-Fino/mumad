@@ -5,7 +5,6 @@
 @use 'sass:color';
 
 .btn {
-    width: fit-content;
     @extend %buttons;
 }
 

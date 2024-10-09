@@ -5,7 +5,7 @@
 
 $c-light      : blue;
 $t-smooth_two : cubic-bezier(0.165, 0.84, 0.44, 1);
-$s-cursor     : 50px;
+$s-cursor     : 30px;
 
 @keyframes scale_cursor {
 	0% { transform: translate(-50%,-50%) scale(1); opacity: 1; }
@@ -58,7 +58,7 @@ $s-cursor     : 50px;
 			height: $s-cursor;
 			border-radius: 100%;
 
-			background: rgba($color: white, $alpha:0.3);
+			background: var(--color-yellow);
 			transition: all .3s $t-smooth_two;
 			// transform: scale(.7);
 
@@ -142,6 +142,7 @@ $s-cursor     : 50px;
 			}
 
 			&.cursor--drag {
+				background: var(--color-yellow-dark);
 				&::before {
 					content: 'drag';
 				}
@@ -175,9 +176,9 @@ $s-cursor     : 50px;
 			// Link
 			&.link {
 				transform: scale(1.5) translate(-50%, -50%);
-				box-shadow: 0 3px 3px rgba( var(--color-black), .3 );
+				// box-shadow: 0 3px 3px rgba( var(--color-black), .3 );
 				mix-blend-mode: difference;
-				// background: rgba(244,201,58,0.9);
+				background: var(--color-yellow-dark);
 
 				&::before {
 					animation: scale_cursor 1s infinite;
@@ -198,22 +199,4 @@ $s-cursor     : 50px;
 			}
 		}
 	}
-}
-
-
-
-html[lang="en-US"] {
-
-	.cursor--readmore {
-		&::before {
-			content: 'view more' !important;					
-		}
-	}
-
-	.cursor--viewall {
-		&::before {
-			content: 'ver all' !important;
-		}
-	}
-
 }

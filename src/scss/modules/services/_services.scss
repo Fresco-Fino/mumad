@@ -3,6 +3,126 @@
 // --------------------------------------------------
 
 .services {    
-    
+
+    .items {
+        display: flex;
+        flex-direction: column;
+        gap: $s_md;
+    }
+
+    .item {
+        padding: $s_lg;
+        background: var(--color-yellow-light);
+        border-radius: 15px;
+        &:last-child {
+            background: var(--color-yellow-dark);
+        }
+    }
+
+    .service__header {
+
+        display: flex;
+        justify-content: space-between;
+
+        padding-bottom: $s_sm;
+        // margin-bottom: $d_sm;
+        // border-bottom: 2px solid var(--color-primary);   
+        
+        @include down(md) {
+            flex-direction: column;
+        }
+        
+        > div {            
+            @include up(md) {
+                max-width: 70%;
+            }
+        }
+
+        h3 {
+            font-family: $font-heading;
+            @extend %fs3;
+            line-height: 1.2em;
+            padding-bottom: $s_sm;
+        }
+
+        p {
+            font-weight: normal;
+            @extend %fs5;
+            line-height: 1.4em;
+        }
+
+        .service__age {
+            @extend %fs5;
+            margin: $s_md 0;
+        }
+
+    }
+
+    .service__body {
+        display: flex;
+        flex-direction: column;
+        gap: $s_lg;        
+    }
+
+    .accordion {
+        border-top: 2px solid var(--color-primary);   
+        padding-top: $s_lg;
+        // margin-top: $s_lg;
+    }
+
+    .accordion__trigger {
+
+        display: flex;
+        justify-content: space-between;        
+
+        @include down(md) {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        @include up(md) {
+            align-items: center;
+        }
+
+        > div {            
+            @include up(md) {
+                width: 50%;
+            }
+        }
+
+        h4 {
+            display: flex;
+            align-items: center;
+            gap: $s_sm;
+            @extend %fs5;
+            margin-bottom: $s_sm;
+        }
+
+        img {
+            max-width: 28px;
+            height: auto;
+        }
+
+        .btn {
+            @include down(md) {
+                text-align: center;
+            }
+        }
+
+    }
+
+    .accordion__body {
+
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s; /* Añade una transición para max-height que dura 0.5 segundos */
+
+        .accordion__inside {
+            border-radius: 15px;
+            padding: $s_lg;
+            background-color: var(--color-yellow);
+        }
+
+    }
 
 }

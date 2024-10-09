@@ -2,34 +2,26 @@ import Splide from '@splidejs/splide';
 
 function moduleCarousel () {
 
-    console.log('module Carousel');
+    // console.log('module Carousel');
 
-    const carousel = document.querySelectorAll('.single__carousel .splide');
+    const carousel = document.querySelectorAll('.carousel .splide');
 
     carousel.forEach((item) => {
 
         const splide = new Splide(item, {
-            // autoWidth: true,
+            autoWidth: true,
             // height: 400,
             type   : 'loop',
             autoplay: true,
-            pagination: false,
+            pagination: true,
             arrows: false,
             gap: 10,
-            perPage: 1,
             perMove: 1,
-            padding: { left: '25vw', right: '25vw' },
-            breakpoints: {
-                767: {
-                    perPage: 1,
-                    perMove: 1,
-                    padding: { left: '10vw', right: '10vw' },
-                    gap: 10
-                }
-            }
+            padding: { left: '0', right: '15vw' }
         });
 
         splide.mount();
+        
     });
 }
 

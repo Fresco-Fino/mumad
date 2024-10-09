@@ -2,64 +2,58 @@
 //	Layout: Header
 // --------------------------------------------------
 
-.site-header {
-
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
+.site-header {    
 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 99;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    z-index: 99;    
     transition: all 0.3s;
 
-    @include up(md) {
-        
-        padding-left: $d_md;
-        padding-right: $d_md;
-        padding-top: $d_md;
+    &.hide-menu {
+        transform: translateY(-100%);
     }
 
-    .header__menu {
-
-        position: relative;
-
-        .header__burger {
-            position: relative;
-            z-index: 100;
-
-            svg {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 200;
-                width: 16px;
-                height: 16px;
-            }
-
-            .icon-cross {
-                display: none;
-            }
-        }
-
-        .sidenav {
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            z-index: 99;
-
-            @include up(md) {
-                top: -10px;
-                right: -10px;
-            }
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-secondary);        
+        padding: 5px;        
+        p {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center
         }
     }
+
+    &__inside {
+        @extend %plr-small;
+        padding-top: $s_sm;
+        padding-bottom: $s_sm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @include up(md) {
+            gap: 30px;
+        }
+    }
+    
+    .main-navigation {
+        @include down(lg) {
+            display: none;
+        }
+    }
+
+}
+
+.shrink .site-header {
+    background-color: var(--color-yellow-light);
 }

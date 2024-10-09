@@ -6,42 +6,36 @@
 @use 'config_theme' as *;
 
 // styles
-$btn-font-family: $font-heading;
+$btn-font-family: $font-base;
 $btn-font-weight: 400;
 $btn-line-height: 1.2;
-$btn-border-radius: 32px;
-$btn-border-width: 1px;
-$btn-outline-border-width: 1px;
+$btn-border-radius: 50px;
+$btn-border-width: 2px;
+$btn-outline-border-width: 2px;
 $btn-case: none;
 
 // sizes buttons
-$btn-padding-y: 20px;
-$btn-padding-x: $s_md;
+$btn-padding-y: $s_sm;
+$btn-padding-x: $s_lg;
 
 // Button Colors
 $buttons-colors: (
-    'black': (
+    'primary': (
+        color: var(--color-yellow),
+        hover-color: var(--color-yellow),
+        hover-bg: var(--color-primary-dark),
+        hover-border-color: var(--color-primary-dark),
+    ),
+    'secondary': (
         color: var(--color-primary),
-        hover-color: var(--color-black),
+        hover-color: var(--color-primary),
+        hover-bg: var(--color-primary-light),
+        hover-border-color: var(--color-primary-light)
+    ),
+    'outline-primary': (
+        color: var(--color-primary),
+        hover-color: var(--color-yellow),
         hover-bg: var(--color-primary),
-        hover-border-color: var(--color-black),
-    ),
-    'white': (
-        color: var(--color-white),
-        hover-color: var(--color-grey),
-        hover-bg: none,
-        hover-border-color: var(--color-grey)
-    ),
-    'primary-light': (
-        color: var(--color-black),
-        hover-color: var(--color-white),
-        hover-bg: var(--color-black),
-        hover-border-color: var(--color-black)
-    ),
-    'outline-white': (
-        color: var(--color-white),
-        hover-color: var(--color-black),
-        hover-bg: var(--color-white),
-        hover-border-color: var(--color-white)
+        hover-border-color: var(--color-primary)
     )
 );

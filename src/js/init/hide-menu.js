@@ -1,6 +1,7 @@
 // hide menu
 
 function hideMenu() {
+
     // console.log('hide menu');
 
     /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
@@ -15,6 +16,7 @@ function hideMenu() {
         }
         prevScrollpos = currentScrollPos;
     };
+    
 }
 
 export default hideMenu;

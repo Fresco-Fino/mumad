@@ -3,29 +3,29 @@
 // --------------------------------------------------
 
 // Font base
-$font-base: 'HankenGrotesk', sans-serif;
-$font-heading: 'HankenGrotesk', sans-serif;
-$font-weight-base: 300;
+$font-base: "Work Sans", sans-serif;
+$font-heading: "Antonio", sans-serif;
+$font-weight-base: 400;
 
 $font-sizes: (
     0: (
         desktop: (
-            max: 170,
-            min: 120
+            max: 150,
+            min: 100
         ),
         mobile: (
-            max: 140,
-            min: 70
+            max: 120,
+            min: 80
         )
     ),
     1: (
         desktop: (
             max: 100,
-            min: 60
+            min: 70
         ),
         mobile: (
-            max: 70,
-            min: 40
+            max: 80,
+            min: 60
         )
     ),
     2: (
@@ -34,58 +34,49 @@ $font-sizes: (
             min: 50
         ),
         mobile: (
-            max: 55,
-            min: 30
+            max: 60,
+            min: 40
         )
     ),
     3: (
         desktop: (
-            max: 50,
-            min: 35
+            max: 52,
+            min: 42
         ),
         mobile: (
-            max: 40,
-            min: 25
+            max: 48,
+            min: 28
         )
     ),
     4: (
         desktop: (
-            max: 30,
-            min: 20
+            max: 42,
+            min: 30
+        ),
+        mobile: (
+            max: 32,
+            min: 24
+        )
+    ),
+    5: (
+        desktop: (
+            max: 28,
+            min: 24
         ),
         mobile: (
             max: 24,
             min: 20
         )
     ),
-    5: (
-        desktop: (
-            max: 20,
-            min: 18
-        ),
-        mobile: (
-            max: 20,
-            min: 16
-        )
-    ),
     6: (
         desktop: (
             max: 18,
-            min: 14
+            min: 16
         ),
         mobile: (
-            max: 16,
-            min: 14
-        )
-    ),
-    7: (
-        desktop: (
-            max: 12,
-            min: 12
-        ),
-        mobile: (
-            max: 12,
-            min: 12
+            max: 18,
+            min: 16
         )
     )
+
 );

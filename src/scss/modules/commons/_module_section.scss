@@ -1,0 +1,9 @@
+// --------------------------------------------------
+//		Modules: Common: Background
+// --------------------------------------------------
+
+.module__section  {
+    @extend %fs5;
+    font-family: $font-base;
+    font-weight: 400;
+}

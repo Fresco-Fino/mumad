@@ -1,62 +1,53 @@
-import { gsap } from 'gsap';
-import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
+// Menu
+import $ from 'jquery';
 
-gsap.registerPlugin(MorphSVGPlugin);
-
-// Menu function
 function menu() {
 
-    const toggleBtn = document.getElementById('menu-toggle'),
-        content = document.querySelector('#wrapper'),
-        sidenav = document.querySelector('.sidenav'),
-        burger = document.querySelector('.header__burger'),
-        list = document.querySelector('.sidenav nav'),
-        lang = document.querySelector('.lang_selector');
-        
-    let isOpen = false;
+    // console.log('menu 1.0');
 
-    const tl = gsap.timeline({ paused: true });
-    if (window.innerWidth < 768) {
-        tl.to(sidenav, { display: 'flex', duration: 0 })
-            .to('.icon-equal', { duration: 0.4, morphSVG: '.icon-cross' })
-            .to(sidenav, {
-                height: '100vh',
-                width: '100vw',
-                duration: 0.3,
-                ease: 'elastic.out(1, 0.75)'
-            }, '<')
-            .to(list, { opacity: 1, duration: 0.2 })
-            .to(lang, { opacity: 1, duration: 0.2 });            
-    } else {
-        tl.to(sidenav, { display: 'block', duration: 0 })
-            .to('.icon-equal', { duration: 0.4, morphSVG: '.icon-cross' })
-            .to(sidenav, {
-                height: 'auto',
-                width: 'auto',
-                duration: 0.5,
-                ease: 'elastic.out(1, 0.75)'
-            }, '<')
-            .to(list, { opacity: 1, duration: 0.2 })
-            .to(lang, { opacity: 1, duration: 0.2 }); 
+    var bodyEl = document.body,
+      content = document.querySelector('.sidenav__bg'),
+      openbtn = document.getElementById('menu-open'),
+      botones = document.querySelectorAll('.sidenav a'),
+      isOpen = false;
+
+    function init() {
+      initEvents();
     }
 
-    toggleBtn.addEventListener('click', (e) => {
-        burger.classList.toggle('is-open');
+    function initEvents() {
 
-        if (isOpen === false) {
-            tl.play();
+      openbtn.addEventListener('click', toggleMenu);
+
+      botones.forEach(function (element) {
+        element.addEventListener('click', toggleMenu);
+      })
+
+      // close the menu element if the target it´s not the menu element or one of its descendants..
+      content.addEventListener('click', function (ev) {
+        var target = ev.target;
+        if (isOpen && target !== openbtn) {
+          toggleMenu();
+        }
+      });
+
+    }
+
+    // toggle menu
+    function toggleMenu() {
+        if (isOpen) {
+            jQuery('body').removeClass('menu-open');
+            jQuery('.sidenav__bg').fadeOut();
         } else {
-            tl.reverse();
+            jQuery('body').addClass('menu-open');
+            jQuery('.sidenav__bg').fadeIn();
         }
         isOpen = !isOpen;
-    });
+    }
 
-    content.addEventListener('click', (e) => {
-        let target = e.target;
-        if (isOpen && target !== sidenav) {
-            tl.reverse();
-        }
-    });
+    // init
+    init();
+
 }
 
 export default menu;

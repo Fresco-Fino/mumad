@@ -13,8 +13,8 @@ if (have_rows('modules')):
         /* Get Module Variables */
         require(TEMPLATEPATH . '/template-parts/modules/variables-modules.php'); ?>
 
-        <div data-refresh="<?php echo $n; ?>" class="module <?php echo get_row_layout(); ?> module--<?php echo $n; ?> <?php // echo $config_module; ?>"
-            style="<?php // echo $config_style; ?>">
+        <div id="<?php echo $slug; ?>" data-refresh="<?php echo $n; ?>" class="module <?php echo get_row_layout(); ?> module--<?php echo $n; ?> <?php echo $config_module; ?>"
+            style="<?php echo $config_style; ?>">
 
             <div class="module__wrapper">
                 <?php /* Get part - Modules */require(TEMPLATEPATH . '/template-parts/modules/modules.php'); ?>

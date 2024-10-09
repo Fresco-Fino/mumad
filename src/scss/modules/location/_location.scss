@@ -4,6 +4,52 @@
 
 .location {
 
-    
+    .items {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .item > img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: $s_lg;
+    }
+
+    .location__address {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: $s_lg;
+        img {
+            max-width: 24px;
+            height: auto;
+            margin-bottom: $s_md;
+        }
+    }    
+
+    .location__contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+        > div {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+    .location__icon {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        img {
+            max-width: 20px;
+            height: auto;
+        }
+    }
     
 }

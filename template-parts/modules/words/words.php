@@ -1,19 +1,19 @@
-<?php  /*
-// fields and content
-$words_intro = (!empty($content['text'])) ? '<div class="module__intro">'.$content['text'].'</div>' : '';
-?>
-
-<div class="module__content">
-    <?php echo $words_intro; ?>
+<div class="module__header">
+    <?php include(TEMPLATEPATH . '/template-parts/modules/commons/module-section.php'); ?>
+    <?php include(TEMPLATEPATH . '/template-parts/modules/commons/module-title.php'); ?>
+    <?php include(TEMPLATEPATH . '/template-parts/modules/commons/module-text.php'); ?>
 </div>
 
-<div class="words__items">
-    <?php foreach ($items as $item) { 
-        $word__title = (!empty($item['title'])) ? '<div class="words__title">'.$item['title'].'</div>' : '';
-        $word__text = (!empty($item['text'])) ? '<div class="words__text">'.$item['text'].'</div>' : ''; ?>
-        <div class="words__item">
-            <?php echo $word__title; ?>
-            <?php echo $word__text; ?>
-        </div>
-    <?php } ?>
-</div> */ ?>
+<?php if (!empty($items)): ?>
+    <div class="items">
+        <?php foreach ($items as $item):
+            $item_title = (!empty($item['title'])) ? $item['title'] : ''; ?>
+            <div class="item">
+                <?php echo $item_title; ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
+
+<?php include(TEMPLATEPATH . '/template-parts/modules/commons/module-buttons.php'); ?>
+

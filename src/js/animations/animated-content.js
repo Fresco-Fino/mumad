@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger );
 
 function animatedContent() {
 
-    console.log('animated content 1.0');
+    // console.log('animated content 1.0');
 
     // animated contents
     const itemContent = gsap.utils.toArray('.animated__content');
@@ -13,7 +13,7 @@ function animatedContent() {
     itemContent.forEach((item) => {
         gsap.from(item, {
             scrollTrigger: {
-                start: 'top 50%',
+                start: 'top 80%',
                 end: 'bottom top',
                 trigger: item,
                 onEnter() {

@@ -1,19 +1,19 @@
 
 // init
 import menu from './init/menu.js';
+import shrink from './init/shrink.js';
+import hideMenu from './init/hide-menu.js';
 import customCursor from './init/cursor.js';
 import smooth from './init/smoothScroll.js';
-import calculateVH  from './init/calvulate-vh.js';
 
 // modules
 import moduleCarousel from './modules/module-carousel.js';
-import moduleModal from './modules/module-modal.js';
 import moduleTeam from './modules/module-team.js';
 import moduleTopHeader from './modules/module-top-header.js';
+import moduleAccordion from './modules/module-accordion.js';
 
 // animations
 import animatedContent from './animations/animated-content.js';
-import animatedPhrases from './animations/animated-phrases.js';
 import animatedTitles from './animations/animated-titles.js';
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -22,23 +22,17 @@ import animatedTitles from './animations/animated-titles.js';
 document.addEventListener('DOMContentLoaded', beforeLoad);
 
 // load
-window.addEventListener('load', () => {
+window.addEventListener('load', () => {    
 
-    start();
+    const loader = document.querySelector('.loader');
 
-    // const titleFullExist = document.getElementsByClassName('module-title-full');
-    // if (titleFullExist.length > 0) {
-    //     titleFull();
-    // }
-
-    // const loader = document.querySelector('.loader');
-
-    // setTimeout(() => {
-    //     loader.classList.add('hidden');
-    //     loader.addEventListener('transitionend', () => {
-    //         loader.style.display = 'none';
-    //     });
-    // }, 500);    
+    setTimeout(() => {
+        loader.classList.add('hidden');
+        loader.addEventListener('transitionend', () => {
+            loader.style.display = 'none';
+            start();
+        });
+    }, 500);    
 
 });
 
@@ -48,24 +42,35 @@ window.addEventListener('resize', onResize);
 ///////////////////////////////////////////////////////////////////////////////////
 
 function beforeLoad() {
-    
-    calculateVH();
-    customCursor();
-    menu();
-    smooth();    
 
-    const singleVideoExist = document.getElementsByClassName('single__header--video');
-    if ( singleVideoExist.length > 0 ) { moduleCarousel(); }
+    smooth();   
+    shrink(); 
+    hideMenu();  
+    menu(); 
+    customCursor(); 
+
+    const topHeaderExist = document.getElementsByClassName('site-header__top');
+    if ( topHeaderExist.length > 0 ) { moduleTopHeader(); }
+
+    const carouselExist = document.getElementsByClassName('carousel');
+    if ( carouselExist.length > 0 ) { moduleCarousel(); }
+
+    const teamExist = document.getElementsByClassName('team');
+    if ( teamExist.length > 0 ) { moduleTeam(); }
+
+    const accordionExist = document.getElementsByClassName('accordion');
+    if ( accordionExist.length > 0 ) { moduleAccordion(); }    
     
 }
 
 function start() {
 
-    const moduleBannerExist = document.getElementsByClassName('new__text');
-    if ( moduleBannerExist.length > 0 ) { moduleBanner(); }
+    const animatedTitleExist = document.getElementsByClassName('animated__title');
+    if ( animatedTitleExist.length > 0 ) { animatedTitles(); }
+
+    const animatedContentExist = document.getElementsByClassName('animated__content');
+    if ( animatedContentExist.length > 0 ) { animatedContent(); }
     
 }
 
-function onResize() {
-    calculateVH();
-}
+function onResize() {}

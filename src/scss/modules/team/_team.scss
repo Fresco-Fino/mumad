@@ -4,6 +4,78 @@
 
 .team {  
 
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .item--team {
+        position: relative;
+        &:hover {
+            .item__hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .item__hoverlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        padding: $s_md;
+
+        h3 {
+            font-family: $font-heading;
+            @extend %fs3;
+            line-height: 1.3em;
+            margin: 0 0 8px;
+            color: var(--color-white);
+            text-transform: uppercase;
+        }
+
+        p {
+            color: var(--color-white);
+            line-height: 1.3em;
+        }
+
+    }
+
+    .item__hover {
         
+        position: absolute;
+        padding: 15px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        padding: $s_md;
+        opacity: 0;  
+        transition: all 0.3s ease-in-out;   
+
+        p {
+            color: var(--color-primary);
+        }  
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            background: var(--color-secondary);
+            opacity: 0.98;            
+        }
+
+    }    
 
 }

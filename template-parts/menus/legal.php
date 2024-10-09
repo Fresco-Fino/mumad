@@ -8,10 +8,10 @@
  * @since        1.0.0
  **/
 
-$legal_menu = wp_get_nav_menu_items('Legal Menu');
+$legal_menu = wp_get_nav_menu_items('legal-menu');
 ?>
 
-<nav id="menu-legal" role="navigation" aria-label="<?php esc_attr_e('Legal menu', 'mumad'); ?>">
+<nav class="legal-navitation" role="navigation" aria-label="<?php esc_attr_e('Legal menu', 'mumad'); ?>">
 	<ul>
 		<?php foreach ($legal_menu as $item) {
 			$link = $item->url;

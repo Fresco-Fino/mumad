@@ -1,94 +1,90 @@
-@font-face {
-  font-family: "HankenGrotesk";
-  src: url("../assets/fonts/HankenGrotesk-Light.woff2") format("woff2"), url("../assets/fonts/HankenGrotesk-Light.woff") format("woff"), url("../assets/fonts/HankenGrotesk-Light.svg") format("svg");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "HankenGrotesk";
-  src: url("../assets/fonts/HankenGrotesk-Regular.woff2") format("woff2"), url("../assets/fonts/HankenGrotesk-Regular.woff") format("woff"), url("../assets/fonts/HankenGrotesk-Regular.svg") format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "HankenGrotesk";
-  src: url("../assets/fonts/HankenGrotesk-Bold.woff2") format("woff2"), url("../assets/fonts/HankenGrotesk-Bold.woff") format("woff"), url("../assets/fonts/HankenGrotesk-Bold.svg") format("svg");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "HankenGrotesk";
-  src: url("../assets/fonts/HankenGrotesk-Light.woff2") format("woff2"), url("../assets/fonts/HankenGrotesk-Light.woff") format("woff"), url("../assets/fonts/HankenGrotesk-Light.svg") format("svg");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "HankenGrotesk";
-  src: url("../assets/fonts/HankenGrotesk-Regular.woff2") format("woff2"), url("../assets/fonts/HankenGrotesk-Regular.woff") format("woff"), url("../assets/fonts/HankenGrotesk-Regular.svg") format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "HankenGrotesk";
-  src: url("../assets/fonts/HankenGrotesk-Bold.woff2") format("woff2"), url("../assets/fonts/HankenGrotesk-Bold.woff") format("woff"), url("../assets/fonts/HankenGrotesk-Bold.svg") format("svg");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Work+Sanswght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Work+Sanswght@400;600;700&display=swap");
 :root {
-  --color-primary: #f4c93b;
-  --color-secondary: #48a4c7;
-  --color-grey-dark: #232323;
-  --color-grey: #5c5c5c;
-  --color-grey-light: #6b6b6b;
+  --color-primary: #124EB8;
+  --color-primary-light: #7DCFEF;
+  --color-primary-dark: #072B60;
+  --color-secondary: #FEA9BB;
+  --color-yellow-dark: #FCE67A;
+  --color-yellow: #FFF6CF;
+  --color-yellow-light: #FFFDF5;
+  --color-green: #21BDAB;
+  --color-orange: #F77D69;
   --color-black: #171717;
   --color-black-light: #222222;
   --color-white: white;
 }
 
 .bg-primary {
-  background-color: #f4c93b;
+  background-color: #124EB8;
 }
 
 .text-primary {
-  color: #f4c93b;
+  color: #124EB8;
+}
+
+.bg-primary-light {
+  background-color: #7DCFEF;
+}
+
+.text-primary-light {
+  color: #7DCFEF;
+}
+
+.bg-primary-dark {
+  background-color: #072B60;
+}
+
+.text-primary-dark {
+  color: #072B60;
 }
 
 .bg-secondary {
-  background-color: #48a4c7;
+  background-color: #FEA9BB;
 }
 
 .text-secondary {
-  color: #48a4c7;
+  color: #FEA9BB;
 }
 
-.bg-grey-dark {
-  background-color: #232323;
+.bg-yellow-dark {
+  background-color: #FCE67A;
 }
 
-.text-grey-dark {
-  color: #232323;
+.text-yellow-dark {
+  color: #FCE67A;
 }
 
-.bg-grey {
-  background-color: #5c5c5c;
+.bg-yellow {
+  background-color: #FFF6CF;
 }
 
-.text-grey {
-  color: #5c5c5c;
+.text-yellow {
+  color: #FFF6CF;
 }
 
-.bg-grey-light {
-  background-color: #6b6b6b;
+.bg-yellow-light {
+  background-color: #FFFDF5;
 }
 
-.text-grey-light {
-  color: #6b6b6b;
+.text-yellow-light {
+  color: #FFFDF5;
+}
+
+.bg-green {
+  background-color: #21BDAB;
+}
+
+.text-green {
+  color: #21BDAB;
+}
+
+.bg-orange {
+  background-color: #F77D69;
+}
+
+.text-orange {
+  color: #F77D69;
 }
 
 .bg-black {
@@ -117,43 +113,43 @@
 
 .fs0 {
   font-size: clamp(
-    4.38rem,
-    11.65vw + 1.54rem,
-    8.75rem
+    5rem,
+    6.66vw + 3.38rem,
+    7.5rem
   );
 }
 
 @media screen and (min-width: 768px) {
   .fs0 {
     font-size: clamp(
-    7.5rem,
-    5.39vw + 4.16rem,
-    10.63rem
+    6.25rem,
+    5.39vw + 2.91rem,
+    9.38rem
   );
   }
 }
 .fs1 {
   font-size: clamp(
-    2.5rem,
-    4.99vw + 1.28rem,
-    4.38rem
+    3.75rem,
+    3.33vw + 2.94rem,
+    5rem
   );
 }
 
 @media screen and (min-width: 768px) {
   .fs1 {
     font-size: clamp(
-    3.75rem,
-    4.31vw + 1.08rem,
+    4.38rem,
+    3.23vw + 2.37rem,
     6.25rem
   );
   }
 }
 .fs2 {
   font-size: clamp(
-    1.88rem,
-    4.16vw + 0.86rem,
-    3.44rem
+    2.5rem,
+    3.33vw + 1.69rem,
+    3.75rem
   );
 }
 
@@ -168,22 +164,39 @@
 }
 .fs3 {
   font-size: clamp(
-    1.56rem,
-    2.5vw + 0.95rem,
-    2.5rem
+    1.75rem,
+    3.33vw + 0.94rem,
+    3rem
   );
 }
 
 @media screen and (min-width: 768px) {
   .fs3 {
     font-size: clamp(
-    2.19rem,
-    1.62vw + 1.19rem,
-    3.13rem
+    2.63rem,
+    1.08vw + 1.96rem,
+    3.25rem
   );
   }
 }
 .fs4 {
+  font-size: clamp(
+    1.5rem,
+    1.33vw + 1.18rem,
+    2rem
+  );
+}
+
+@media screen and (min-width: 768px) {
+  .fs4 {
+    font-size: clamp(
+    1.88rem,
+    1.29vw + 1.07rem,
+    2.63rem
+  );
+  }
+}
+.fs5 {
   font-size: clamp(
     1.25rem,
     0.67vw + 1.09rem,
@@ -192,128 +205,146 @@
 }
 
 @media screen and (min-width: 768px) {
-  .fs4 {
-    font-size: clamp(
-    1.25rem,
-    1.08vw + 0.58rem,
-    1.88rem
-  );
-  }
-}
-.fs5 {
-  font-size: clamp(
-    1rem,
-    0.67vw + 0.84rem,
-    1.25rem
-  );
-}
-
-@media screen and (min-width: 768px) {
   .fs5 {
     font-size: clamp(
-    1.13rem,
-    0.22vw + 0.99rem,
-    1.25rem
+    1.5rem,
+    0.43vw + 1.23rem,
+    1.75rem
   );
   }
 }
 .fs6 {
   font-size: clamp(
-    0.88rem,
-    0.33vw + 0.79rem,
-    1rem
+    1rem,
+    0.33vw + 0.92rem,
+    1.13rem
   );
 }
 
 @media screen and (min-width: 768px) {
   .fs6 {
     font-size: clamp(
-    0.88rem,
-    0.43vw + 0.61rem,
+    1rem,
+    0.22vw + 0.87rem,
     1.13rem
   );
   }
 }
-.fs7 {
-  font-size: clamp(
-    0.75rem,
-    0vw + 0.75rem,
-    0.75rem
-  );
-}
-
-@media screen and (min-width: 768px) {
-  .fs7 {
-    font-size: clamp(
-    0.75rem,
-    0vw + 0.75rem,
-    0.75rem
-  );
-  }
-}
 .btn__primary {
-  background-color: #f4c93b;
+  background-color: #124EB8;
   border-color: transparent;
 }
 
 .btn__outline-primary {
   background-color: transparent;
-  border-color: #f4c93b;
+  border-color: #124EB8;
   border-style: solid;
-  border-width: 1px;
-  color: #f4c93b;
+  border-width: 2px;
+  color: #124EB8;
+}
+
+.btn__primary-light {
+  background-color: #7DCFEF;
+  border-color: transparent;
+}
+
+.btn__outline-primary-light {
+  background-color: transparent;
+  border-color: #7DCFEF;
+  border-style: solid;
+  border-width: 2px;
+  color: #7DCFEF;
+}
+
+.btn__primary-dark {
+  background-color: #072B60;
+  border-color: transparent;
+}
+
+.btn__outline-primary-dark {
+  background-color: transparent;
+  border-color: #072B60;
+  border-style: solid;
+  border-width: 2px;
+  color: #072B60;
 }
 
 .btn__secondary {
-  background-color: #48a4c7;
+  background-color: #FEA9BB;
   border-color: transparent;
 }
 
 .btn__outline-secondary {
   background-color: transparent;
-  border-color: #48a4c7;
+  border-color: #FEA9BB;
   border-style: solid;
-  border-width: 1px;
-  color: #48a4c7;
+  border-width: 2px;
+  color: #FEA9BB;
 }
 
-.btn__grey-dark {
-  background-color: #232323;
+.btn__yellow-dark {
+  background-color: #FCE67A;
   border-color: transparent;
 }
 
-.btn__outline-grey-dark {
+.btn__outline-yellow-dark {
   background-color: transparent;
-  border-color: #232323;
+  border-color: #FCE67A;
   border-style: solid;
-  border-width: 1px;
-  color: #232323;
+  border-width: 2px;
+  color: #FCE67A;
 }
 
-.btn__grey {
-  background-color: #5c5c5c;
+.btn__yellow {
+  background-color: #FFF6CF;
   border-color: transparent;
 }
 
-.btn__outline-grey {
+.btn__outline-yellow {
   background-color: transparent;
-  border-color: #5c5c5c;
+  border-color: #FFF6CF;
   border-style: solid;
-  border-width: 1px;
-  color: #5c5c5c;
+  border-width: 2px;
+  color: #FFF6CF;
 }
 
-.btn__grey-light {
-  background-color: #6b6b6b;
+.btn__yellow-light {
+  background-color: #FFFDF5;
   border-color: transparent;
 }
 
-.btn__outline-grey-light {
+.btn__outline-yellow-light {
   background-color: transparent;
-  border-color: #6b6b6b;
+  border-color: #FFFDF5;
   border-style: solid;
-  border-width: 1px;
-  color: #6b6b6b;
+  border-width: 2px;
+  color: #FFFDF5;
+}
+
+.btn__green {
+  background-color: #21BDAB;
+  border-color: transparent;
+}
+
+.btn__outline-green {
+  background-color: transparent;
+  border-color: #21BDAB;
+  border-style: solid;
+  border-width: 2px;
+  color: #21BDAB;
+}
+
+.btn__orange {
+  background-color: #F77D69;
+  border-color: transparent;
+}
+
+.btn__outline-orange {
+  background-color: transparent;
+  border-color: #F77D69;
+  border-style: solid;
+  border-width: 2px;
+  color: #F77D69;
 }
 
 .btn__black {
@@ -325,7 +356,7 @@
   background-color: transparent;
   border-color: #171717;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   color: #171717;
 }
 
@@ -338,7 +369,7 @@
   background-color: transparent;
   border-color: #222222;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   color: #222222;
 }
 
@@ -351,48 +382,38 @@
   background-color: transparent;
   border-color: white;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   color: white;
 }
 
-.btn__black {
+.btn__primary {
+  color: var(--color-yellow);
+}
+
+.btn__primary:hover {
+  color: var(--color-yellow);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btn__secondary {
   color: var(--color-primary);
 }
 
-.btn__black:hover {
-  color: var(--color-black);
+.btn__secondary:hover {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+}
+
+.btn__outline-primary {
+  color: var(--color-primary);
+}
+
+.btn__outline-primary:hover {
+  color: var(--color-yellow);
   background-color: var(--color-primary);
-  border-color: var(--color-black);
-}
-
-.btn__white {
-  color: var(--color-white);
-}
-
-.btn__white:hover {
-  color: var(--color-grey);
-  background-color: none;
-  border-color: var(--color-grey);
-}
-
-.btn__primary-light {
-  color: var(--color-black);
-}
-
-.btn__primary-light:hover {
-  color: var(--color-white);
-  background-color: var(--color-black);
-  border-color: var(--color-black);
-}
-
-.btn__outline-white {
-  color: var(--color-white);
-}
-
-.btn__outline-white:hover {
-  color: var(--color-black);
-  background-color: var(--color-white);
-  border-color: var(--color-white);
+  border-color: var(--color-primary);
 }
 
 .ptb-small {
@@ -424,13 +445,13 @@
 }
 .plr-medium {
   padding-left: clamp(
-    0.94rem,
-    2.5vw + 0.33rem,
+    1.25rem,
+    1.66vw + 0.84rem,
     1.88rem
   );
   padding-right: clamp(
-    0.94rem,
-    2.5vw + 0.33rem,
+    1.25rem,
+    1.66vw + 0.84rem,
     1.88rem
   );
 }
@@ -461,7 +482,7 @@ body.wp-admin :where(.editor-styles-wrapper) p a {
 }
 body.wp-admin :where(.editor-styles-wrapper) .has-x-large-font-size {
   margin: 0;
-  font-family: "HankenGrotesk", sans-serif;
+  font-family: "Antonio", sans-serif;
   font-size: 60px !important;
 }
 @media screen and (min-width: 768px) {
@@ -476,7 +497,7 @@ body.wp-admin :where(.editor-styles-wrapper) .has-x-large-font-size {
 }
 body.wp-admin :where(.editor-styles-wrapper) .has-large-font-size {
   margin: 0;
-  font-family: "HankenGrotesk", sans-serif;
+  font-family: "Antonio", sans-serif;
   font-size: 40px !important;
 }
 @media screen and (min-width: 768px) {
@@ -526,7 +547,7 @@ body.wp-admin :where(.editor-styles-wrapper) .has-medium-font-size {
 }
 body.wp-admin :where(.editor-styles-wrapper) .has-x-large-font-size strong,
 body.wp-admin :where(.editor-styles-wrapper) .has-large-font-size strong {
-  font-family: "HankenGrotesk", sans-serif;
+  font-family: "Antonio", sans-serif;
   font-weight: normal;
 }
 /*# sourceMappingURL=admin.css.map */

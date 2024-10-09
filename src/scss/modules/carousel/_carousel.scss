@@ -3,5 +3,13 @@
 // --------------------------------------------------
 
 .carousel {
-    
+    img {
+        max-height: 35vh;
+        @include up(md) {
+            max-height: 40vh;
+        }
+        @include up(lg) {
+            max-height: 60vh;
+        }
+    }
 }

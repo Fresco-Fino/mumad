@@ -9,18 +9,27 @@
 @use 'sass:math';
 
 %buttons {
+
     font-family: $btn-font-family;
     font-weight: $btn-font-weight;
     line-height: $btn-line-height;
 
-    text-decoration: none;
+    text-transform: none;
+    text-decoration: underline;
     border-radius: $btn-border-radius;
     transition: all 0.3s;
 
     border-style: solid;
     border-width: $btn-border-width;
 
-    padding: $btn-padding-y $btn-padding-x;
+    padding: $btn-padding-y $btn-padding-x;    
+
+    font-size: 20px;
+
+    @include down(md) {
+        font-size: 16px;
+    }
+
 }
 
 // class buttons

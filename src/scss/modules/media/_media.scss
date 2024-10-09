@@ -2,4 +2,19 @@
 //	Modules: Media
 // --------------------------------------------------
 
-.media {}
+.media {
+    
+    .items {
+        display: flex;
+        justify-content: center;
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .module__buttons {
+        justify-content: center;
+    }
+
+}

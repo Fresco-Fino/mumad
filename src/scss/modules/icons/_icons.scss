@@ -4,6 +4,46 @@
 
 .icons {
     
-    
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+
+        @include up(md) {
+            gap: 20px;
+        }
+    }
+
+    .item {
+
+        padding: $s_lg;
+        text-align: center;
+        width: calc( 50% - 15px);
+        border-radius: 10px;
+        background-color: var(--color-yellow);
+
+        @include up(md) {
+            width: calc( 33.33% - 15px);
+        }
+
+        @include up(lg) {
+            width: calc( 25% - 15px);
+        }
+
+        @include up(xl) {
+            width: calc( 20% - 16px);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h3 {
+            font-family: $font-heading;
+            @extend %fs4;
+            margin-top: $s_sm;
+        }
+    }
 
 }

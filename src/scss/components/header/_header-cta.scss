@@ -1,0 +1,17 @@
+// --------------------------------------------------
+//	Layout: Header: CTA
+// --------------------------------------------------
+
+.site-header__cta {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .btn__outline-primary {
+        @include down(md) {
+            display: none;
+        }
+    }
+    
+}

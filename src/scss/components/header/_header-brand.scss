@@ -2,19 +2,16 @@
 //	Layout: Header: Brand
 // --------------------------------------------------
 
-.header__brand {
-
-    position: relative;
-    display: block;
-
-    @include up(md) {
-        width: 38px;
-    }
+.site-header__brand {    
 
     img {
-        object-fit: cover;
-        width: 100%;
-        transition: all 0.3s;
+        max-width: 120px;
+        @include up(md) {
+            max-width: 180px;
+        }
+        @include up(xl) {
+            max-width: 215px;
+        }
     }
     
 }

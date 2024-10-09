@@ -3,21 +3,25 @@
 // --------------------------------------------------
 
 .loader {
+
     position: fixed;
     width: 100vw;
     height: 100%;
-    z-index: 0;
+    z-index: 2000;
 
     // display: none;
     align-items: center;
     justify-content: center;
 
-    background-color: var(--color-primary);
-    background-image: url(../assets/images/loading-bg.jpg);
+    background-color: var(--color-yellow);
+    background-image: url(../assets/images/loading-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    // background-size: 80%;
 
     opacity: 1;
 
-    display: none;
+    // display: none;
 
     &.hidden {
         opacity: 0;
@@ -33,11 +37,14 @@
         transform: translate(-50%, -50%);
         background-image: url(../assets/images/loading-brand.png);
         background-size: cover;
-        width: 165px;
-        height: 248px;
+        width: 200px;
+        height: 109px;
 
         @include down(md) {
-            transform: translate(-50%, -50%) scale(0.5);
+            width: 150px;
+            height: 82px;
         }
+
     }
+    
 }

@@ -3,18 +3,29 @@
 // --------------------------------------------------
 
 $colors: (
+
     'primary': (
-        base: #f4c93b
+        base: #124EB8,
+        light: #7DCFEF,
+        dark: #072B60
     ),
 
     'secondary': (
-        base: #48a4c7
+        base: #FEA9BB
     ),
 
-    'grey': (
-        dark: #232323,
-        base: #5c5c5c,
-        light: #6b6b6b
+    'yellow': (
+        dark: #FCE67A,
+        base: #FFF6CF,
+        light: #FFFDF5
+    ),
+
+    'green': (
+        base: #21BDAB
+    ),
+
+    'orange': (
+        base: #F77D69
     ),
 
     'black': (
@@ -25,4 +36,5 @@ $colors: (
     'white': (
         base: white
     )
+
 );

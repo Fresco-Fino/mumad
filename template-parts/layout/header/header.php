@@ -19,3 +19,5 @@
     </div>
 
 </header>
+
+<?php /* GET part - header */ get_template_part('template-parts/sidenav/sidenav'); ?>

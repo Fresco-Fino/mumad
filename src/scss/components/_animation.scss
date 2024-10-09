@@ -1,0 +1,17 @@
+// --------------------------------------------------
+//	Components: Custom Buttons
+// --------------------------------------------------
+
+.animated__title {
+    opacity: 0;
+}
+
+.animated__content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .3s;
+    &.animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

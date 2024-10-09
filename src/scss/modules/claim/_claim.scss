@@ -2,7 +2,11 @@
 //  Modules: Claim
 // --------------------------------------------------
 
-.claim {   
-    
-    
+.claim {       
+    p {
+        @extend %fs3;
+        line-height: 1.2em;
+        font-family: $font-heading;
+        font-weight: bold;
+    }    
 }

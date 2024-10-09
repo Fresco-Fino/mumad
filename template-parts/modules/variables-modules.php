@@ -8,33 +8,38 @@ $items = get_sub_field('items');
 $extras = get_sub_field('extras');
 $buttons = get_sub_field('buttons');
 
-// $config_module = '';
-// $config_style = '';
+$config_module = '';
+$config_style = '';
 // $bg_color = $config['bg_color_group']['bg_color'];
 // $bg_color_custom = $config['bg_color_group']['bg_custom'];
 
-// if (!empty($config['margins']['margin-top'])) {
-//     $config_module .= ' ' . $config['margins']['margin-top'];
-// }
-// if (!empty($config['margins']['margin-bottom'])) {
-//     $config_module .= ' ' . $config['margins']['margin-bottom'];
-// }
-// if (!empty($config['margins']['margin-left'])) {
-//     $config_module .= ' ' . $config['margins']['margin-left'];
-// }
-// if (!empty($config['margins']['margin-right'])) {
-//     $config_module .= ' ' . $config['margins']['margin-right'];
-// }
+if (!empty($config['margins']['margin-top'])) {
+    $config_module .= ' ' . $config['margins']['margin-top'];
+}
+if (!empty($config['margins']['margin-bottom'])) {
+    $config_module .= ' ' . $config['margins']['margin-bottom'];
+}
+if (!empty($config['margins']['margin-left'])) {
+    $config_module .= ' ' . $config['margins']['margin-left'];
+}
+if (!empty($config['margins']['margin-right'])) {
+    $config_module .= ' ' . $config['margins']['margin-right'];
+}
 
-// // Slug [Config]
-// if (!empty($config)) {
-//     $slug = (!empty($config['slug'])) ? $config['slug'] : '';
-// }
+// Slug [Config]
+if (!empty($config)) {
+    $slug = (!empty($config['slug'])) ? $config['slug'] : '';
+}
 
-// // Tema Modulo [Config]
-// if (!empty($config['bg_image'])) {
-//     $config_style .= ($config['bg_image']) ? 'background-image: url(' . $config['bg_image'] . ');' : '';
-// }
+// Background color
+if (!empty($config['bg_color'])) {
+    $config_module .= ' ' . $config['bg_color'];
+}
+
+// Tema Modulo [Config]
+if (!empty($config['bg_image'])) {
+    $config_style .= ($config['bg_image']) ? 'background-image: url(' . $config['bg_image']. ');' : '';
+}
 
 // // Type [Extras]
 // if (!empty($extras['type'])) {

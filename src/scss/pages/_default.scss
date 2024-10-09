@@ -4,8 +4,31 @@
 
 .page-template-default  {
 
-    p, h2, h3, h4 {
-        margin: 0 0 20px 0;
-    }   
-    
+    #wrapper {
+
+        h1{
+            @extend %fs2;
+        }
+
+        h2 {
+            @extend %fs3;
+            padding-bottom: $s_xl;
+        }
+
+        h3 {
+            @extend %fs4;
+            padding-bottom: $s_lg;
+        }
+
+        h4 {
+            @extend %fs5;
+            padding-bottom: $s_md;
+        }
+
+        p  {
+            margin: 0 0 20px 0;
+        }   
+
+    }
+        
 }

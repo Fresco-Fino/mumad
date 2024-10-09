@@ -10,28 +10,26 @@
 
 // body
 body {
+
     position: relative;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
 
-    @extend %fs5;
+    @extend %font-base;
 
     background-color: $body-bg;
-    font-family: $font-base;
-    font-weight: $font-weight-base;
     color: $body-color;
+
 }
 
 // paragrapgh
 p,
 li,
 a {
-    @extend %fs5;
+    @extend %font-base;
     margin: 0;
     padding: 0;
-    font-family: $font-base;
-
     strong {
         font-weight: 700;
     }
@@ -42,7 +40,7 @@ button {
 }
 
 small {
-    @extend %fs7;
+    @extend %fs6;
 }
 
 // links

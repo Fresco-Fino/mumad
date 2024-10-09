@@ -2,8 +2,29 @@
 //	Components: Menu: Social Menu
 // --------------------------------------------------
 
-.menu-social {
+.social-navigation {
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;       
+        @include up(md) {
+            justify-content: flex-end;  
+        } 
+    }
+
+    h5 {
+        font-weight: normal;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
     a {
         text-transform: uppercase;
+        font-size: 24px;
+        @include up(md) {
+            font-size: 40px;
+        }
     }
+
 }

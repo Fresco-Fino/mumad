@@ -10,7 +10,6 @@
     @return map.get($colors, $scheme, $tone);
 }
 
-
 // root colors
 :root {
     @each $colorname, $palette in $colors {

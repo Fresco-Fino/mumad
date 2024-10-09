@@ -3,6 +3,40 @@
 // --------------------------------------------------
 
 .form {
+
+    .items {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form__icon__row {
+        display: flex;
+        margin: 15px 0;
+        gap: 25px;
+    }
+
+    .form__icon {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        img {
+            max-width: 20px;
+            height: auto;
+        }
+    }
+
+    .form__row {
+        margin: 10px 0;
+        p {
+            display: flex;
+            gap: 15px;
+        }
+    }
+
+    .wpcf7-form-control-wrap {
+        flex: 1 1 0;
+    }
     
 
 }

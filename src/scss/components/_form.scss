@@ -1,149 +1,92 @@
-.slide.form {
-    
-    form {
+// --------------------------------------------------
+// Components: Form
+// --------------------------------------------------
 
-        input[type='text'],
-        input[type='email'],
-        input[type='tel'],
-        textarea {
-            @extend %fs6;
-            font-family: $font-base;
-            font-weight: 300;
-            font-style: italic;
-            color: var(--color-white);
-
-            border: none;
-            border-bottom: 1px solid var(--color-white);
-            background: transparent;
-            outline: none;
-
-            margin-top: 10px;
-            padding-bottom: 15px;
-
-            width: 100%;
-
-            @include up(xxxl) {
-                margin-top: 20px;
-            }
-
-            &::placeholder {
-                opacity: 0.8;
-            }
-        }
-    }
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    background-color: transparent;
+    padding: 10px 15px;
+    border: 2px solid var(--color-primary);
+    width: 100%;
+    color: var(--color-primary);
+    font-size: 18px;
 }
 
-.footer__form {
-    form {
-        input[type='text'],
-        input[type='email'],
-        input[type='tel'],
-        textarea {
-            @extend %fs6;
-            font-family: $font-base;
-            font-weight: 300;
-            font-style: italic;
+textarea {
+    width: 100%;
+    max-height: 150px
+}
 
-            border: none;
-            background: transparent;
-            outline: none;
+input[type="submit"] {
+    @extend .btn;
+    @extend .btn__primary;
+    margin-top: $s_md;
+}
 
-            color: var(--color-black);
-            border-bottom: 1px solid var(--color-black);
-            padding-left: 10px;
+.wpcf7-not-valid-tip {
+    font-size: 14px;
+}
 
-            margin-top: 30px;
-            padding-bottom: 15px;
+// checkbox
+.wpcf7-acceptance  {
 
-            width: 100%;
+    display: block;
+    margin: 20px 0 0 0;
+    .wpcf7-list-item { margin: 0; }
+    label { display: flex; }
 
-            &::placeholder {
-                opacity: 0.8;
-            }
-        }
+    a { text-decoration: underline;  }
+    a:hover { color: var(--color-primary); }
+    span, a {
+        font-size: 14px !important;
+        @media ( min-width: 992px  ) {  font-size: 12px !important; }
+        @media ( min-width: 1200px  ) {  font-size: 13px !important; }
+    }
 
-        .wpcf7-acceptance {
+    input {
+        opacity: 0;
+    }
 
-            .wpcf7-list-item {
-                margin: 0;
-            }
+    input:not(:checked) + .wpcf7-list-item-label::after {
+        opacity: 0;
+    }
 
-            .wpcf7-list-item-label {
-                line-height: 1.2em;
-            }
-
-            label {
-                display: flex;
-            }
-
-        }
-
-        // checkbox
-        .wpcf7-acceptance {
-            padding: $s_lg 0;
+    .wpcf7-list-item-label {
+        position: relative;
+        padding-left: 1rem;
+        &::before,
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-15px, -50%);
+            content: '';
             display: inline-block;
-            .wpcf7-list-item {
-                margin: 0;
-            }
-
-            input {
-                opacity: 0;
-            }
-
-            input:not(:checked) + .wpcf7-list-item-label::after {
-                opacity: 0;
-            }
-
-            .wpcf7-list-item-label {
-                position: relative;
-                padding-left: 10px;
-
-                @extend %fs7;
-                a {
-                    text-decoration: none;
-                    @extend %fs7;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-
-                &::before,
-                &::after {
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    transform: translate(-16px, -50%);
-                    content: '';
-                    display: inline-block;
-                    width: 16px;
-                    height: 16px;
-                    border: 1px solid var(--color-black);
-                    border-radius: 3px;
-                    transition: all 0.3s;
-                    background-color: transparent;
-                }
-                &::after {
-                    border: 0;
-                    width: 12px;
-                    height: 12px;
-                    left: 3px;
-                    opacity: 0;
-                    background-color: var(--color-black);
-                    border-radius: 3px;
-                    opacity: 1;
-                }
-            }
+            width: 1.5rem;
+            height: 1.5rem;
+            // border: 1px solid $color-primary;
+            border-radius: 100%;
+            transition: all 0.3s;
+            background-color: white;
+        }
+        &::after {
+            border: 0;
+            width: 0.9rem;
+            height: 0.9rem;
+            left: 0.3rem;
+            opacity: 0;
+            background-color: var(--color-primary);
+            // border-radius: 0.3rem;
+            opacity: 1;
         }
     }
 
-    &.footer__form {
-        input[type='text'],
-        input[type='email'],
-        input[type='tel'],
-        textarea {
-            color: var(--color-black);
-            border-bottom: 1px solid var(--color-black);
-        }
-    }
 }
+
+/****** PLACEGOLDER ******/
+::-webkit-input-placeholder { color: var(--color-primary) !important; transition: all .3s;  }
+::-moz-placeholder { color: var(--color-primary) !important; transition: all .3s;  }
+:-ms-input-placeholder { color: var(--color-primary) !important;  transition: all .3s; }
+:-moz-placeholder { color: var(--color-primary) !important; transition: all .3s;  }

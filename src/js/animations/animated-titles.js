@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function animatedTitles() {
 
-    console.log('animated titles')
+    // console.log('animated titles')
 
     // get animated titles
     const quotes = document.querySelectorAll('.animated__title');
@@ -14,6 +14,9 @@ function animatedTitles() {
     function setupSplits() {
         // animation for each title
         quotes.forEach((quote) => {
+
+            quote.style.opacity = 1;
+
             // Reset if needed
             if (quote.anim) {
                 quote.anim.progress(1).kill();

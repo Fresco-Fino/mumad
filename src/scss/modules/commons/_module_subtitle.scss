@@ -1,0 +1,12 @@
+// --------------------------------------------------
+//		Modules: Common: Background
+// --------------------------------------------------
+
+.module__subtitle  {
+    @extend %fs5;
+    font-family: $font-base;
+    font-weight: 400;
+    background-color: var(--color-secondary);
+    padding: 10px 20px;
+    border-radius: 50px;
+}

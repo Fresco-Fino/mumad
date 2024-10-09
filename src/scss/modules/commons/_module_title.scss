@@ -1,0 +1,12 @@
+// --------------------------------------------------
+//		Modules: Common: Background
+// --------------------------------------------------
+
+.module__title  {
+    p, h1, h2, h3, h4 {
+        @extend %fs2;
+        line-height: 1.2;
+        font-family: $font-heading;
+        font-weight: bold;
+    }
+}

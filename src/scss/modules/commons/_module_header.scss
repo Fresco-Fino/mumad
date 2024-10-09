@@ -1,0 +1,14 @@
+// --------------------------------------------------
+//		Modules: Common: Background
+// --------------------------------------------------
+
+.module__header {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.module__header + .items,
+.columns + .items {
+    margin-top: $s_xl;
+}

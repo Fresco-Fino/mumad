@@ -3,6 +3,7 @@
 // --------------------------------------------------
 
 .carousel {
+
     img {
         max-height: 35vh;
         @include up(md) {
@@ -12,4 +13,9 @@
             max-height: 60vh;
         }
     }
+
+    .columns {
+        @extend .pl-medium;
+    }
+
 }

@@ -1123,7 +1123,7 @@ a, body {
   );
   }
 }
-.pl-medium {
+.pl-medium, .carousel .columns {
   padding-left: clamp(
     1.25rem,
     6.66vw + -0.37rem,
@@ -1132,7 +1132,7 @@ a, body {
 }
 
 @media screen and (min-width: 768px) {
-  .pl-medium {
+  .pl-medium, .carousel .columns {
     padding-left: clamp(
     1.88rem,
     12.93vw + -6.14rem,
@@ -2905,7 +2905,6 @@ input[type=submit] {
     max-height: 60vh;
   }
 }
-
 .claim p {
   line-height: 1.2em;
   font-family: "Antonio", sans-serif;
@@ -4402,7 +4401,7 @@ button, small, .card .card__footer h4, .card .card__footer h2, .card__team .team
   );
   }
 }
-.pl-medium {
+.pl-medium, .carousel .columns {
   padding-left: clamp(
     1.25rem,
     6.66vw + -0.37rem,
@@ -4411,7 +4410,7 @@ button, small, .card .card__footer h4, .card .card__footer h2, .card__team .team
 }
 
 @media screen and (min-width: 768px) {
-  .pl-medium {
+  .pl-medium, .carousel .columns {
     padding-left: clamp(
     1.88rem,
     12.93vw + -6.14rem,

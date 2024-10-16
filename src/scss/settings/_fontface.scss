@@ -2,4 +2,41 @@
 //		Settings: Fontface
 // --------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Work+Sanswght@400;600;700&display=swap');
+// @import url('../assets/fonts/https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Work+Sanswght@400;600;700&display=swap');
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../assets/fonts/WorkSans-Bold.woff2') format('woff2'),
+        url('../assets/fonts/WorkSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../assets/fonts/WorkSans-Regular.woff2') format('woff2'),
+        url('../assets/fonts/WorkSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Antonio';
+    src: url('../assets/fonts/Antonio-Bold.woff2') format('woff2'),
+        url('../assets/fonts/Antonio-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../assets/fonts/WorkSans-SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/WorkSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

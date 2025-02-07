@@ -17,7 +17,8 @@
                         $item_title = (!empty($item['title'])) ? '<h3>'.$item['title'].'</h3>' : '';
                         $item_subtitle = (!empty($item['subtitle'])) ? '<p>'.$item['subtitle'].'</p>' : '';
                         $item_image = (!empty($item['image'])) ? '<img src="'.$item['image']['url'].'" alt="">' : '';
-                        $item_hover = (!empty($item['text'])) ? '<div class="item__hover">'.$item['text'].'<a>ver más</a></div>' : '';    
+                        $item_view = (!empty($item['text_large'])) ? '<a>ver más</a>' : '';
+                        $item_hover = (!empty($item['text'])) ? '<div class="item__hover">'.$item['text'].' '.$item_view.'</div>' : '';    
                         $item_more = (!empty($item['text_large'])) ? $item['text_large'] : '';                        
                         ?>
                         <li class="splide__slide">

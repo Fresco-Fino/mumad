@@ -58,6 +58,10 @@ function moduleTeam() {
     }
 
     function openModal(element) {
+        const text = element.getAttribute('data-text');
+        if (!text) {
+            return; // Do not open the modal if data-text is empty
+        }
         document.getElementById('modalTitle').innerText = element.getAttribute('data-title');
         document.getElementById('modalSubtitle').innerText = element.getAttribute('data-subtitle');
         document.getElementById('modalText').innerHTML = element.getAttribute('data-text');

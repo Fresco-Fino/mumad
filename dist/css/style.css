@@ -3306,6 +3306,9 @@ input[type=submit] {
     max-width: 850px;
   }
 }
+.modal-content p + p {
+  margin-top: clamp(0.938rem, 0.699rem + 0.98vw, 1.875rem);
+}
 .modal-content #modalSubtitle {
   margin-bottom: clamp(0.938rem, 0.699rem + 0.98vw, 1.875rem);
   font-weight: bold;

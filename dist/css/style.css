@@ -3288,12 +3288,14 @@ input[type=submit] {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
   position: relative;
   background-color: #fefefe;
-  margin: 15% auto;
   padding: clamp(1.25rem, 0.931rem + 1.307vw, 2.5rem);
   border: 1px solid #888;
   width: 80%;

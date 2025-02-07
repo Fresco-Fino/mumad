@@ -17,10 +17,11 @@
                         $item_title = (!empty($item['title'])) ? '<h3>'.$item['title'].'</h3>' : '';
                         $item_subtitle = (!empty($item['subtitle'])) ? '<p>'.$item['subtitle'].'</p>' : '';
                         $item_image = (!empty($item['image'])) ? '<img src="'.$item['image']['url'].'" alt="">' : '';
-                        $item_hover = (!empty($item['text'])) ? '<div class="item__hover">'.$item['text'].'</div>' : '';                        
+                        $item_hover = (!empty($item['text'])) ? '<div class="item__hover">'.$item['text'].'<a>ver más</a></div>' : '';    
+                        $item_more = (!empty($item['text_large'])) ? $item['text_large'] : '';                        
                         ?>
                         <li class="splide__slide">
-                            <div class="item item--team">
+                            <div class="item item--team"  data-title="<?php echo $item['title']; ?>" data-subtitle="<?php echo $item['subtitle']; ?>" data-text="<?php echo $item_more; ?>" onclick="openModal(this)">
                                 <div class="item__hoverlay">
                                     <?php echo $item_title; ?>
                                     <?php echo $item_subtitle; ?>

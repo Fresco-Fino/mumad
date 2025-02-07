@@ -40,5 +40,15 @@ $location_link = (!empty($theme_settings['contact_info']['address_link'])) ? '<a
 
 </footer>
 
+<!-- Modal HTML -->
+<div id="teamModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h3>
+        <p id="modalSubtitle"></p>
+        <div id="modalText"></div>
+    </div>
+</div>
+
 <?php // Custom Cursor ?>
 <?php get_template_part('template-parts/components/cursor'); ?>  

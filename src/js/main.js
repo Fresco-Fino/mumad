@@ -74,3 +74,14 @@ function start() {
 }
 
 function onResize() {}
+
+function openModal(element) {
+    document.getElementById('modalTitle').innerText = element.getAttribute('data-title');
+    document.getElementById('modalSubtitle').innerText = element.getAttribute('data-subtitle');
+    document.getElementById('modalText').innerHTML = element.getAttribute('data-text');
+    document.getElementById('teamModal').style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById('teamModal').style.display = "none";
+}

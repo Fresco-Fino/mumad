@@ -33,6 +33,40 @@ function moduleTeam() {
 
         splide.mount();
     });
+
+    // Add event listeners to team items
+    const teamItems = document.querySelectorAll('.item--team');
+
+    teamItems.forEach(item => {
+        item.addEventListener('click', () => openModal(item));
+    });
+
+    // Add event listener to close button
+    const closeButton = document.querySelector('.modal .close');
+    if (closeButton) {
+        closeButton.addEventListener('click', closeModal);
+    }
+
+    // Add event listener to modal container
+    const modal = document.getElementById('teamModal');
+    if (modal) {
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    }
+
+    function openModal(element) {
+        document.getElementById('modalTitle').innerText = element.getAttribute('data-title');
+        document.getElementById('modalSubtitle').innerText = element.getAttribute('data-subtitle');
+        document.getElementById('modalText').innerHTML = element.getAttribute('data-text');
+        document.getElementById('teamModal').style.display = "block";
+    }
+    
+    function closeModal() {
+        document.getElementById('teamModal').style.display = "none";
+    }
 }
 
 export default moduleTeam;

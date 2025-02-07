@@ -11,6 +11,7 @@
 
     .item--team {
         position: relative;
+        cursor: pointer;
         &:hover {
             .item__hover {
                 opacity: 1;
@@ -60,9 +61,18 @@
         opacity: 0;  
         transition: all 0.3s ease-in-out;   
 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         p {
             color: var(--color-primary);
         }  
+
+        a {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
 
         &:before {
             content: '';
@@ -78,4 +88,52 @@
 
     }    
 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: $s_lg;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    @include up('xl') {
+        max-width: 850px;
+    }
+
+    h2 {
+        margin-bottom: $s_lg;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

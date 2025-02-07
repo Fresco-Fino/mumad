@@ -3298,6 +3298,8 @@ input[type=submit] {
   border: 1px solid #888;
   width: 80%;
   border-radius: 10px;
+  max-height: 90vh; /* Ensure the modal content fits within the viewport */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
 }
 @media screen and (min-width: 1280px) {
   .modal-content {
@@ -3305,7 +3307,7 @@ input[type=submit] {
   }
 }
 .modal-content #modalSubtitle {
-  margin-bottom: clamp(1.25rem, 0.931rem + 1.307vw, 2.5rem);
+  margin-bottom: clamp(0.938rem, 0.699rem + 0.98vw, 1.875rem);
   font-weight: bold;
 }
 

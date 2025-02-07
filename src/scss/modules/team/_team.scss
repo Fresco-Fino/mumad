@@ -111,15 +111,17 @@
     border: 1px solid #888;
     width: 80%;
     border-radius: 10px;
+    max-height: 90vh; /* Ensure the modal content fits within the viewport */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
     @include up('xl') {
         max-width: 850px;
     }
 
     #modalSubtitle {
-        margin-bottom: $s_lg;
+        margin-bottom: $s_md;
         font-weight: bold;
     }
-    
+
 }
 
 .close {

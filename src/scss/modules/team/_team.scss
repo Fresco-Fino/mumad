@@ -115,9 +115,11 @@
         max-width: 850px;
     }
 
-    h2 {
+    #modalSubtitle {
         margin-bottom: $s_lg;
+        font-weight: bold;
     }
+    
 }
 
 .close {

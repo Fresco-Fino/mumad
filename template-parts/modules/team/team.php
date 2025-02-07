@@ -21,7 +21,7 @@
                         $item_more = (!empty($item['text_large'])) ? $item['text_large'] : '';                        
                         ?>
                         <li class="splide__slide">
-                            <div class="item item--team"  data-title="<?php echo $item['title']; ?>" data-subtitle="<?php echo $item['subtitle']; ?>" data-text="<?php echo $item_more; ?>" onclick="openModal(this)">
+                            <div class="item item--team"  data-title="<?php echo $item['title']; ?>" data-subtitle="<?php echo $item['subtitle']; ?>" data-text="<?php echo $item_more; ?>">
                                 <div class="item__hoverlay">
                                     <?php echo $item_title; ?>
                                     <?php echo $item_subtitle; ?>

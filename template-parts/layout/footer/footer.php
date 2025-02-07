@@ -43,7 +43,7 @@ $location_link = (!empty($theme_settings['contact_info']['address_link'])) ? '<a
 <!-- Modal HTML -->
 <div id="teamModal" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="close">&times;</span>
         <h2 id="modalTitle"></h3>
         <p id="modalSubtitle"></p>
         <div id="modalText"></div>

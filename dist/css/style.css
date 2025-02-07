@@ -3304,8 +3304,9 @@ input[type=submit] {
     max-width: 850px;
   }
 }
-.modal-content h2 {
+.modal-content #modalSubtitle {
   margin-bottom: clamp(1.25rem, 0.931rem + 1.307vw, 2.5rem);
+  font-weight: bold;
 }
 
 .close {

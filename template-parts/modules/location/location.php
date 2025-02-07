@@ -7,7 +7,7 @@
     <?php include(TEMPLATEPATH . '/template-parts/modules/commons/module-text.php'); ?>
 
     <?php if(!empty($theme_settings['contact_info']['address'])):        
-        $location_link = (!empty($theme_settings['contact_info']['address_link'])) ? '<a href="'.$theme_settings['contact_info']['address_link']['url'].'">ver en Google Maps</a>' : ''; ?>
+        $location_link = (!empty($theme_settings['contact_info']['address_link'])) ? '<a target="_blank" href="'.$theme_settings['contact_info']['address_link']['url'].'">ver en Google Maps</a>' : ''; ?>
         <div class="location__address">
             <img src="<?php bloginfo('template_url') ?>/dist/assets/images/icon-location.png" alt="">
             <p><?php echo $theme_settings['contact_info']['address']; ?></p>

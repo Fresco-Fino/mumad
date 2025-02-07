@@ -2,7 +2,7 @@
 $theme_settings = get_field('theme_settings','options'); 
 $location_phone = (!empty($theme_settings['contact_info']['phone'])) ? $theme_settings['contact_info']['phone'] : '';
 $location_email = (!empty($theme_settings['contact_info']['email'])) ? $theme_settings['contact_info']['email'] : '';
-$location_link = (!empty($theme_settings['contact_info']['address_link'])) ? '<a href="'.$theme_settings['contact_info']['address_link']['url'].'">ver en Google Maps</a><br/>' : '';
+$location_link = (!empty($theme_settings['contact_info']['address_link'])) ? '<a target="_blank" href="'.$theme_settings['contact_info']['address_link']['url'].'">ver en Google Maps</a><br/>' : '';
 ?>
 
 <footer class="site-footer">

@@ -1653,6 +1653,7 @@ video {
   .site-footer__contact {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 }
 .site-footer__contact p, .site-footer__contact a {

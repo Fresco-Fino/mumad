@@ -1,4 +1,9 @@
-
+<?php
+$theme_settings = get_field('theme_settings','options'); 
+$location_phone = (!empty($theme_settings['contact_info']['phone'])) ? $theme_settings['contact_info']['phone'] : '';
+$location_email = (!empty($theme_settings['contact_info']['email'])) ? $theme_settings['contact_info']['email'] : '';
+$location_link = (!empty($theme_settings['contact_info']['address_link'])) ? '<a href="'.$theme_settings['contact_info']['address_link']['url'].'">ver en Google Maps</a><br/>' : '';
+?>
 
 <footer class="site-footer">
 
@@ -11,9 +16,14 @@
 
             <div>
                 <p>
-                Paseo del comandante fortea 46<br/>
-                <a href="#" target="_blank">ver en Google Maps</a><br/>
-                666 777 888 · hola@mumad.com
+
+                <?php if(!empty($theme_settings['contact_info']['address'])): ?>
+                    <?php echo $theme_settings['contact_info']['address']; ?><br/>
+                <?php endif; ?>
+
+                <?php echo $location_link; ?>
+                <?php echo $location_phone; ?> · <?php echo $location_email; ?>
+
                 </p>
             </div>
 
